@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>043fc577-f3bb-46f3-b0fa-decfd58d8f70</ProjectGuid>
+    <ProjectGuid>{043FC577-F3BB-46F3-B0FA-DECFD58D8F70}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ModeloDatosSGA</RootNamespace>
@@ -31,22 +31,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="MDBodega.cs" />
+    <Compile Include="MDCantidadProducto.cs" />
+    <Compile Include="MDEmpleado.cs" />
+    <Compile Include="MDEnvio.cs" />
+    <Compile Include="MDEstado.cs" />
+    <Compile Include="MDPeticionEnvio.cs" />
+    <Compile Include="MDProducto.cs" />
+    <Compile Include="MDProveedor.cs" />
+    <Compile Include="MDRegistroCambio.cs" />
+    <Compile Include="MDSucursal.cs" />
+    <Compile Include="MDTipoEmpleado.cs" />
+    <Compile Include="MDTipoProducto.cs" />
+    <Compile Include="MDUnidadProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
