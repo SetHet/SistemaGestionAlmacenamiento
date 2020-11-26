@@ -8,7 +8,7 @@ namespace NegocioSGA
     public class ConfiguracionNegocioSGA
     {
         private const string server = "DESKTOP-F8TM6K2";
-        private const string dataBase = "SGA";
+        private const string dataBase = "SGAPersia";
 
         public static string Server { get { return server; } }
 
