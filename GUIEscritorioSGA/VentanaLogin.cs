@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace GUIEscritorioSGA
 {
-    public partial class Form1 : Form
+    public partial class VentanaLogin : Form
     {
-        public Form1()
+        public VentanaLogin()
         {
             InitializeComponent();
         }
