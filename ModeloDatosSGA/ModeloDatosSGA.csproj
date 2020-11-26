@@ -42,8 +42,12 @@
   <ItemGroup>
     <Compile Include="MDBodega.cs" />
     <Compile Include="MDEmpleado.cs" />
+    <Compile Include="MDEntradaCabecera.cs" />
+    <Compile Include="MDEntradaDetalle.cs" />
     <Compile Include="MDProducto.cs" />
     <Compile Include="MDProveedor.cs" />
+    <Compile Include="MDSalidaCabecera.cs" />
+    <Compile Include="MDSalidaDetalle.cs" />
     <Compile Include="MDSucursal.cs" />
     <Compile Include="MDTipoProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
