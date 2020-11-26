@@ -41,18 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MDBodega.cs" />
-    <Compile Include="MDCantidadProducto.cs" />
     <Compile Include="MDEmpleado.cs" />
-    <Compile Include="MDEnvio.cs" />
-    <Compile Include="MDEstado.cs" />
-    <Compile Include="MDPeticionEnvio.cs" />
     <Compile Include="MDProducto.cs" />
     <Compile Include="MDProveedor.cs" />
-    <Compile Include="MDRegistroCambio.cs" />
     <Compile Include="MDSucursal.cs" />
-    <Compile Include="MDTipoEmpleado.cs" />
     <Compile Include="MDTipoProducto.cs" />
-    <Compile Include="MDUnidadProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
