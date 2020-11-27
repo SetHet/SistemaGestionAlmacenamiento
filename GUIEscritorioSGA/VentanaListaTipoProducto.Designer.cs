@@ -36,9 +36,12 @@
             // 
             // DataGridView_ListaTipoProducto
             // 
+            this.DataGridView_ListaTipoProducto.AllowUserToAddRows = false;
+            this.DataGridView_ListaTipoProducto.AllowUserToDeleteRows = false;
             this.DataGridView_ListaTipoProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_ListaTipoProducto.Location = new System.Drawing.Point(12, 12);
             this.DataGridView_ListaTipoProducto.Name = "DataGridView_ListaTipoProducto";
+            this.DataGridView_ListaTipoProducto.ReadOnly = true;
             this.DataGridView_ListaTipoProducto.Size = new System.Drawing.Size(434, 380);
             this.DataGridView_ListaTipoProducto.TabIndex = 0;
             // 
@@ -73,7 +76,7 @@
             this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.DataGridView_ListaTipoProducto);
             this.Name = "VentanaListaTipoProducto";
-            this.Text = "VentanaListaTipoProducto";
+            this.Text = "SGA Persia Lista Tipos Productos";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ListaTipoProducto)).EndInit();
             this.ResumeLayout(false);
 
