@@ -57,6 +57,7 @@ namespace GUIEscritorioSGA
         public void Mostrar()
         {
             this.Visible = true;
+            Clear();
         }
 
         private void VentanaLogin_Load(object sender, EventArgs e)
@@ -64,6 +65,11 @@ namespace GUIEscritorioSGA
             
         }
 
+        public void Clear()
+        {
+            Txt_Pass.Clear();
+            Txt_Rut.Clear();
+        }
         
     }
 }
