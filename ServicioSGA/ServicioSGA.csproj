@@ -71,6 +71,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModeloDatosSGA\ModeloDatosSGA.csproj">
+      <Project>{043fc577-f3bb-46f3-b0fa-decfd58d8f70}</Project>
+      <Name>ModeloDatosSGA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NegocioSGA\NegocioSGA.csproj">
+      <Project>{718b92c2-6d65-45d6-aaed-7d224d4c4c74}</Project>
+      <Name>NegocioSGA</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

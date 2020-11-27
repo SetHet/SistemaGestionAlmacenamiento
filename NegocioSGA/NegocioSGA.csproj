@@ -43,5 +43,15 @@
     <Compile Include="ConfiguracionNegocioSGA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConexionBD\ConexionBD.csproj">
+      <Project>{995351e9-63b4-45b0-8663-6d57a3559c8e}</Project>
+      <Name>ConexionBD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModeloDatosSGA\ModeloDatosSGA.csproj">
+      <Project>{043fc577-f3bb-46f3-b0fa-decfd58d8f70}</Project>
+      <Name>ModeloDatosSGA</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
