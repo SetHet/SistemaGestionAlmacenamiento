@@ -165,6 +165,9 @@
     <EmbeddedResource Include="VentanaMenuPrincipal.resx">
       <DependentUpon>VentanaMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanaTransaccionEntrada.resx">
+      <DependentUpon>VentanaTransaccionEntrada.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Connected Services\ServiceEmpleado\GUIEscritorioSGA.ServiceEmpleado.MDEmpleado.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
