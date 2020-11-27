@@ -28,7 +28,15 @@ namespace GUIEscritorioSGA
             string rut = Txt_Rut.Text;
             string password = Txt_Pass.Text;
 
-            empleado = auxServiceEmpleado.Login(rut, password);
+            try
+            {
+                empleado = auxServiceEmpleado.Login(rut, password);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Problema con el Web Service.\n\n" + ex.Message);
+                return;
+            }
 
             if (empleado != null)
             {
