@@ -56,8 +56,14 @@ namespace GUIEscritorioSGA
 
         public void Mostrar()
         {
-            this.Visible = true;
-            Clear();
+            try { 
+                this.Visible = true;
+                Clear();
+            }
+            catch (Exception)
+            {
+                //Se lanza esto cuando se va ha cerrar la aplicacion definitivamente
+            }
         }
 
         private void VentanaLogin_Load(object sender, EventArgs e)

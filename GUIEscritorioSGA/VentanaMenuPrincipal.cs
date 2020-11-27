@@ -16,7 +16,22 @@ namespace GUIEscritorioSGA
             InitializeComponent();
             this.Disposed += (object sender, EventArgs e) => VentanaLogin.Instancia.Mostrar();
         }
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            GC.Collect();
+        }
 
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void tipoProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VentanaMantenedorTipoProducto ventanaMantenedorTipoProducto = new VentanaMantenedorTipoProducto();
+            ventanaMantenedorTipoProducto.ShowDialog();
+        }
 
     }
 }
