@@ -15,5 +15,15 @@ namespace GUIEscritorioSGA
         {
             InitializeComponent();
         }
+
+        private void Btn_Acceder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Salir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
