@@ -14,6 +14,9 @@ namespace GUIEscritorioSGA
         public VentanaMenuPrincipal()
         {
             InitializeComponent();
+            this.Disposed += (object sender, EventArgs e) => VentanaLogin.Instancia.Mostrar();
         }
+
+
     }
 }

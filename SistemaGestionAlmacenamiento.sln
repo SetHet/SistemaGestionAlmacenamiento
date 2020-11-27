@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NegocioSGA", "NegocioSGA\NegocioSGA.csproj", "{718B92C2-6D65-45D6-AAED-7D224D4C4C74}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUIEscritorioSGA", "GUIEscritorioSGA\GUIEscritorioSGA.csproj", "{9CC0E903-37D1-4858-B6A1-9A4CE272B2DD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DA4CF504-64BC-4EAB-AC8A-A0318129E030} = {DA4CF504-64BC-4EAB-AC8A-A0318129E030}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioSGA", "ServicioSGA\ServicioSGA.csproj", "{DA4CF504-64BC-4EAB-AC8A-A0318129E030}"
 EndProject

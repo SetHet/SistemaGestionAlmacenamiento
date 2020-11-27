@@ -74,6 +74,7 @@
             this.Txt_Rut.Name = "Txt_Rut";
             this.Txt_Rut.Size = new System.Drawing.Size(226, 30);
             this.Txt_Rut.TabIndex = 3;
+            this.Txt_Rut.Text = "12.345.678-9";
             // 
             // Txt_Pass
             // 
@@ -83,6 +84,7 @@
             this.Txt_Pass.PasswordChar = '*';
             this.Txt_Pass.Size = new System.Drawing.Size(226, 30);
             this.Txt_Pass.TabIndex = 4;
+            this.Txt_Pass.Text = "1234";
             // 
             // Btn_Acceder
             // 
@@ -120,6 +122,7 @@
             this.Controls.Add(this.label1);
             this.Name = "VentanaLogin";
             this.Text = "Login SGA Persia";
+            this.Load += new System.EventHandler(this.VentanaLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
