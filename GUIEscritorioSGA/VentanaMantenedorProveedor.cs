@@ -15,5 +15,15 @@ namespace GUIEscritorioSGA
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Nuevo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

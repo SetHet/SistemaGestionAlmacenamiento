@@ -144,6 +144,21 @@
     <EmbeddedResource Include="VentanaLogin.resx">
       <DependentUpon>VentanaLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanaMantenedorBodega.resx">
+      <DependentUpon>VentanaMantenedorBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaMantenedorEmpleado.resx">
+      <DependentUpon>VentanaMantenedorEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaMantenedorProducto.resx">
+      <DependentUpon>VentanaMantenedorProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaMantenedorProveedor.resx">
+      <DependentUpon>VentanaMantenedorProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaMantenedorSucursal.resx">
+      <DependentUpon>VentanaMantenedorSucursal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaMantenedorTipoProducto.resx">
       <DependentUpon>VentanaMantenedorTipoProducto.cs</DependentUpon>
     </EmbeddedResource>

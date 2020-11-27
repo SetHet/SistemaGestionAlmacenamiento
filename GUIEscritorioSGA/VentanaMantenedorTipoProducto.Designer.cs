@@ -72,6 +72,7 @@
             this.Txt_ID.ReadOnly = true;
             this.Txt_ID.Size = new System.Drawing.Size(186, 26);
             this.Txt_ID.TabIndex = 2;
+            this.Txt_ID.TextChanged += new System.EventHandler(this.Txt_ID_TextChanged);
             // 
             // Txt_Nombre
             // 
@@ -80,6 +81,7 @@
             this.Txt_Nombre.Name = "Txt_Nombre";
             this.Txt_Nombre.Size = new System.Drawing.Size(186, 26);
             this.Txt_Nombre.TabIndex = 3;
+            this.Txt_Nombre.TextChanged += new System.EventHandler(this.Txt_Nombre_TextChanged);
             // 
             // Btn_Nuevo
             // 

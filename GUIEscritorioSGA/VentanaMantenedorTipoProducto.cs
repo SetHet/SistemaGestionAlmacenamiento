@@ -199,5 +199,15 @@ namespace GUIEscritorioSGA
             PosicionLista = 0;
             ActualizarPantalla();
         }
+
+        private void Txt_ID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_Nombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -44,7 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfiguracionNegocioSGA.cs" />
+    <Compile Include="NegocioBodega.cs" />
     <Compile Include="NegocioEmpleado.cs" />
+    <Compile Include="NegocioProducto.cs" />
+    <Compile Include="NegocioProveedor.cs" />
+    <Compile Include="NegocioSucursal.cs" />
     <Compile Include="NegocioTipoProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
