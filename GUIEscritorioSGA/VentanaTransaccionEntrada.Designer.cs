@@ -64,6 +64,7 @@
             this.Btn_Cant_0.TabIndex = 1;
             this.Btn_Cant_0.Text = "0";
             this.Btn_Cant_0.UseVisualStyleBackColor = true;
+            this.Btn_Cant_0.Click += new System.EventHandler(this.Btn_Cant_0_Click);
             // 
             // Btn_Cant_menos10
             // 
@@ -74,6 +75,7 @@
             this.Btn_Cant_menos10.TabIndex = 2;
             this.Btn_Cant_menos10.Text = "-10";
             this.Btn_Cant_menos10.UseVisualStyleBackColor = true;
+            this.Btn_Cant_menos10.Click += new System.EventHandler(this.Btn_Cant_menos10_Click);
             // 
             // Btn_Cant_menos1
             // 
@@ -84,6 +86,7 @@
             this.Btn_Cant_menos1.TabIndex = 3;
             this.Btn_Cant_menos1.Text = "-1";
             this.Btn_Cant_menos1.UseVisualStyleBackColor = true;
+            this.Btn_Cant_menos1.Click += new System.EventHandler(this.Btn_Cant_menos1_Click);
             // 
             // Btn_Cant_mas1
             // 
@@ -94,6 +97,7 @@
             this.Btn_Cant_mas1.TabIndex = 4;
             this.Btn_Cant_mas1.Text = "+1";
             this.Btn_Cant_mas1.UseVisualStyleBackColor = true;
+            this.Btn_Cant_mas1.Click += new System.EventHandler(this.Btn_Cant_mas1_Click);
             // 
             // Btn_Cant_mas10
             // 
@@ -104,6 +108,7 @@
             this.Btn_Cant_mas10.TabIndex = 5;
             this.Btn_Cant_mas10.Text = "+10";
             this.Btn_Cant_mas10.UseVisualStyleBackColor = true;
+            this.Btn_Cant_mas10.Click += new System.EventHandler(this.Btn_Cant_mas10_Click);
             // 
             // Btn_Completar
             // 
@@ -114,6 +119,7 @@
             this.Btn_Completar.TabIndex = 6;
             this.Btn_Completar.Text = "Completar";
             this.Btn_Completar.UseVisualStyleBackColor = true;
+            this.Btn_Completar.Click += new System.EventHandler(this.Btn_Completar_Click);
             // 
             // Btn_Salir
             // 
@@ -124,6 +130,7 @@
             this.Btn_Salir.TabIndex = 7;
             this.Btn_Salir.Text = "Salir";
             this.Btn_Salir.UseVisualStyleBackColor = true;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // ComboBox_Proveedor
             // 
