@@ -95,9 +95,9 @@ namespace NegocioSGA
             return Conexion.NonQuery(nonQuery);
         }
 
-        public bool Update(MDTipoProducto editarTipoProducto)
+        public bool Update(MDTipoProducto editableTipoProducto)
         {
-            return Update(editarTipoProducto.IdTipoProducto, editarTipoProducto.NombreTipo);
+            return Update(editableTipoProducto.IdTipoProducto, editableTipoProducto.NombreTipo);
         }
     }
 }
