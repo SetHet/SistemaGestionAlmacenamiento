@@ -52,11 +52,59 @@
     <Compile Include="VentanaLogin.Designer.cs">
       <DependentUpon>VentanaLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaMantenedorBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaMantenedorBodega.Designer.cs">
+      <DependentUpon>VentanaMantenedorBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaMantenedorEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaMantenedorEmpleado.Designer.cs">
+      <DependentUpon>VentanaMantenedorEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaMantenedorProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaMantenedorProducto.Designer.cs">
+      <DependentUpon>VentanaMantenedorProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaMantenedorProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaMantenedorProveedor.Designer.cs">
+      <DependentUpon>VentanaMantenedorProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaMantenedorSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaMantenedorSucursal.Designer.cs">
+      <DependentUpon>VentanaMantenedorSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaMantenedorTipoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaMantenedorTipoProducto.Designer.cs">
+      <DependentUpon>VentanaMantenedorTipoProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VentanaMenuPrincipal.Designer.cs">
       <DependentUpon>VentanaMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaTransaccionEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaTransaccionEntrada.Designer.cs">
+      <DependentUpon>VentanaTransaccionEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaTransaccionSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaTransaccionSalida.Designer.cs">
+      <DependentUpon>VentanaTransaccionSalida.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +115,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentanaLogin.resx">
+      <DependentUpon>VentanaLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
