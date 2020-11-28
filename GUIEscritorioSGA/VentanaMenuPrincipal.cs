@@ -39,5 +39,11 @@ namespace GUIEscritorioSGA
             VentanaTransaccionEntrada ventanaTransaccionEntrada = new VentanaTransaccionEntrada();
             ventanaTransaccionEntrada.ShowDialog();
         }
+
+        private void salidaProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VentanaTransaccionSalida ventanaTransaccionSalida = new VentanaTransaccionSalida();
+            ventanaTransaccionSalida.ShowDialog();
+        }
     }
 }

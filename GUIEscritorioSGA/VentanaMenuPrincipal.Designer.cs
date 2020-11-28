@@ -121,8 +121,9 @@
             // salidaProductosToolStripMenuItem
             // 
             this.salidaProductosToolStripMenuItem.Name = "salidaProductosToolStripMenuItem";
-            this.salidaProductosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.salidaProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salidaProductosToolStripMenuItem.Text = "Salida Productos";
+            this.salidaProductosToolStripMenuItem.Click += new System.EventHandler(this.salidaProductosToolStripMenuItem_Click);
             // 
             // informesToolStripMenuItem
             // 
