@@ -74,6 +74,7 @@
     <Content Include="WebServiceEntrada.asmx" />
     <Content Include="WebServiceProducto.asmx" />
     <Content Include="WebServiceProveedor.asmx" />
+    <Content Include="WebServiceSalida.asmx" />
     <Content Include="WebServiceSucursal.asmx" />
     <Content Include="WebServiceTipoProducto.asmx" />
   </ItemGroup>
@@ -97,6 +98,10 @@
     </Compile>
     <Compile Include="WebServiceProveedor.asmx.cs">
       <DependentUpon>WebServiceProveedor.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServiceSalida.asmx.cs">
+      <DependentUpon>WebServiceSalida.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WebServiceSucursal.asmx.cs">
