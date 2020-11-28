@@ -25,7 +25,7 @@ namespace NegocioSGA
 
             if (!negEntradaCabecera.Insert(entradaCabecera))
             {
-                MessageBox.Show("No se pudo Guardar el registro de entrada");
+                Console.WriteLine("No se pudo Guardar el registro de entrada");
                 return false;
             }
 
@@ -42,7 +42,7 @@ namespace NegocioSGA
                     entradaDetalle.Cod_entrada = cod_entrada;
                     if (!negEntradaDetalle.Insert(entradaDetalle))
                     {
-                        MessageBox.Show("No se pudo Guardar el registro de entrada del producto " + itemProdCant.IdProducto);
+                        Console.WriteLine("No se pudo Guardar el registro de entrada del producto " + itemProdCant.IdProducto);
                         return false;
                     }
                 }

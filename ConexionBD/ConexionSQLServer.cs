@@ -30,12 +30,12 @@ namespace ConexionBD
         {
             if (DataBase.Equals(string.Empty))
             {
-                MessageBox.Show("ConexionSQL, DataBase no ingresado");
+                Console.WriteLine("ConexionSQL, DataBase no ingresado");
                 return;
             }
             if (Server.Equals(string.Empty))
             {
-                MessageBox.Show("ConexionSQL, DataBase no ingresado");
+                Console.WriteLine("ConexionSQL, DataBase no ingresado");
                 return;
             }
 
@@ -46,7 +46,7 @@ namespace ConexionBD
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ConexionSQL, No se pudo realizar la conexion. \n" + ex.Message);
+                Console.WriteLine("ConexionSQL, No se pudo realizar la conexion. \n" + ex.Message);
                 SqlConexion = null;
             }
         }
@@ -59,7 +59,7 @@ namespace ConexionBD
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ConexionSQL, No se pudo abrir la conexion. \n" + ex.Message);
+                Console.WriteLine("ConexionSQL, No se pudo abrir la conexion. \n" + ex.Message);
             }
         }
 
@@ -71,7 +71,7 @@ namespace ConexionBD
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ConexionSQL, No se pudo cerrar la conexion. \n" + ex.Message);
+                Console.WriteLine("ConexionSQL, No se pudo cerrar la conexion. \n" + ex.Message);
             }
         }
 
@@ -87,7 +87,7 @@ namespace ConexionBD
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ConexionSQL, No se pudo realizar un select. \n" + ex.Message);
+                Console.WriteLine("ConexionSQL, No se pudo realizar un select. \n" + ex.Message);
             }
             Close();
             return dataTable;
@@ -105,7 +105,7 @@ namespace ConexionBD
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ConexionSQL, No se pudo realizar el NonQuery. \n" + ex.Message);
+                Console.WriteLine("ConexionSQL, No se pudo realizar el NonQuery. \n" + ex.Message);
                 Close();
                 return false;
             }
