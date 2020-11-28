@@ -42,6 +42,7 @@
             this.aplicacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Txt_Saludo = new System.Windows.Forms.Label();
             this.MenuStripPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,14 +114,14 @@
             // entradaProductosToolStripMenuItem
             // 
             this.entradaProductosToolStripMenuItem.Name = "entradaProductosToolStripMenuItem";
-            this.entradaProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.entradaProductosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.entradaProductosToolStripMenuItem.Text = "Entrada Productos";
             this.entradaProductosToolStripMenuItem.Click += new System.EventHandler(this.entradaProductosToolStripMenuItem_Click);
             // 
             // salidaProductosToolStripMenuItem
             // 
             this.salidaProductosToolStripMenuItem.Name = "salidaProductosToolStripMenuItem";
-            this.salidaProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salidaProductosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.salidaProductosToolStripMenuItem.Text = "Salida Productos";
             // 
             // informesToolStripMenuItem
@@ -152,11 +153,23 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // Txt_Saludo
+            // 
+            this.Txt_Saludo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Txt_Saludo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Saludo.Location = new System.Drawing.Point(0, 24);
+            this.Txt_Saludo.Name = "Txt_Saludo";
+            this.Txt_Saludo.Size = new System.Drawing.Size(800, 426);
+            this.Txt_Saludo.TabIndex = 1;
+            this.Txt_Saludo.Text = "Bienvenido";
+            this.Txt_Saludo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // VentanaMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Txt_Saludo);
             this.Controls.Add(this.MenuStripPrincipal);
             this.MainMenuStrip = this.MenuStripPrincipal;
             this.Name = "VentanaMenuPrincipal";
@@ -184,5 +197,6 @@
         private System.Windows.Forms.ToolStripMenuItem aplicacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Label Txt_Saludo;
     }
 }

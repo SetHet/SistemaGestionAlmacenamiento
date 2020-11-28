@@ -15,6 +15,7 @@ namespace GUIEscritorioSGA
         {
             InitializeComponent();
             this.Disposed += (object sender, EventArgs e) => VentanaLogin.Instancia.Mostrar();
+            Txt_Saludo.Text = $"Bienvenido {EmpleadoLogueado.Empleado.Nombre} {EmpleadoLogueado.Empleado.Apellido}";
         }
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
