@@ -52,6 +52,9 @@
     <Compile Include="NegocioEntradaDetalle.cs" />
     <Compile Include="NegocioProducto.cs" />
     <Compile Include="NegocioProveedor.cs" />
+    <Compile Include="NegocioSalida.cs" />
+    <Compile Include="NegocioSalidaCabecera.cs" />
+    <Compile Include="NegocioSalidaDetalle.cs" />
     <Compile Include="NegocioSucursal.cs" />
     <Compile Include="NegocioTipoProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
