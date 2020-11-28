@@ -47,6 +47,7 @@
     <Compile Include="NegocioBodega.cs" />
     <Compile Include="NegocioEmpleado.cs" />
     <Compile Include="NegocioEntradaCabecera.cs" />
+    <Compile Include="NegocioEntradaDetalle.cs" />
     <Compile Include="NegocioProducto.cs" />
     <Compile Include="NegocioProveedor.cs" />
     <Compile Include="NegocioSucursal.cs" />
