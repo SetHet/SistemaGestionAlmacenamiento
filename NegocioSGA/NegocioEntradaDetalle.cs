@@ -72,9 +72,9 @@ namespace NegocioSGA
         }
 
 
-        public bool Insert(MDEntradaDetalle nuevoEntradaCabecera)
+        public bool Insert(MDEntradaDetalle nuevoEntradaDetalle)
         {
-            return Insert(nuevoEntradaCabecera.Cod_entrada, nuevoEntradaCabecera.Id_producto, nuevoEntradaCabecera.Cantidad);
+            return Insert(nuevoEntradaDetalle.Cod_entrada, nuevoEntradaDetalle.Id_producto, nuevoEntradaDetalle.Cantidad);
         }
 
         public bool Insert(int cod_entrada, int id_producto, int cantidad)
