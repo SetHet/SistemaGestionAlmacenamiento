@@ -36,9 +36,9 @@ namespace NegocioSGA
                 
                 Producto = new MDProducto();
                 Producto.IdProducto = Convert.ToInt32(table.Rows[0]["id_producto"]);
-                Producto.IdTipoProducto = Convert.ToInt32(table.Rows[0]["id_tipo"]);
-                Producto.Nombre = table.Rows[0]["nombre_producto"].ToString();
-                Producto.Descripcion = table.Rows[0]["descripcion_producto"].ToString();
+                Producto.IdTipoProducto = Convert.ToInt32(table.Rows[0]["id_tipo_producto"]);
+                Producto.Nombre = table.Rows[0]["nombre"].ToString();
+                Producto.Descripcion = table.Rows[0]["descripcion"].ToString();
             }
             else
             {
@@ -62,9 +62,9 @@ namespace NegocioSGA
                     
                     Producto = new MDProducto();
                     Producto.IdProducto = Convert.ToInt32(row["id_producto"]);
-                    Producto.IdTipoProducto = Convert.ToInt32(row["id_tipo"]);
-                    Producto.Nombre = row["nombre_Producto"].ToString();
-                    Producto.Descripcion = row["descripcion_producto"].ToString();
+                    Producto.IdTipoProducto = Convert.ToInt32(row["id_tipo_producto"]);
+                    Producto.Nombre = row["nombre"].ToString();
+                    Producto.Descripcion = row["descripcion"].ToString();
                     lista.Add(Producto);
                 }
 
@@ -84,7 +84,7 @@ namespace NegocioSGA
         public bool Insert(MDProducto nuevoProducto)
         {
             //FALTA ID TIPO PRODUCTO QUE ES FORANEO
-            string nonQuery = $"INSERT INTO Producto (id_tipo,nombre_producto,descripcion_producto) VALUES (''{nuevoProducto.IdTipoProducto}',{nuevoProducto.Nombre}','{nuevoProducto.Descripcion}')";
+            string nonQuery = $"INSERT INTO Producto (id_tipo_producto, nombre, descripcion) VALUES ({nuevoProducto.IdTipoProducto},'{nuevoProducto.Nombre}','{nuevoProducto.Descripcion}')";
             return Conexion.NonQuery(nonQuery);
         }
 
@@ -100,7 +100,7 @@ namespace NegocioSGA
 
         public bool Update(int id, int id_tipo ,string nombre, string descripcion)
         {
-            string nonQuery = $"UPDATE Producto SET  IdTipoProducto = '{id_tipo}' , nombre_producto = '{nombre}', descripcion_producto = '{descripcion}' WHERE id_producto = {id}";
+            string nonQuery = $"UPDATE Producto SET  Id_Tipo_Producto = {id_tipo} , nombre = '{nombre}', descripcion = '{descripcion}' WHERE id_producto = {id}";
             return Conexion.NonQuery(nonQuery);
         }
 

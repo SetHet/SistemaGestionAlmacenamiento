@@ -35,8 +35,8 @@ namespace NegocioSGA
             {
                 Proveedor = new MDProveedor();
                 Proveedor.IdProveedor = Convert.ToInt32(table.Rows[0]["id_proveedor"]);
-                Proveedor.Nombre = table.Rows[0]["nombre_Proveedor"].ToString();
-                Proveedor.Direccion = table.Rows[0]["direccion_proveedor"].ToString();
+                Proveedor.Nombre = table.Rows[0]["nombre"].ToString();
+                Proveedor.Direccion = table.Rows[0]["direccion"].ToString();
             }
             else
             {
@@ -59,8 +59,8 @@ namespace NegocioSGA
                 {
                     Proveedor = new MDProveedor();
                     Proveedor.IdProveedor = Convert.ToInt32(row["id_proveedor"]);
-                    Proveedor.Nombre = row["nombre_Proveedor"].ToString();
-                    Proveedor.Direccion = row["direccion_proveedor"].ToString();
+                    Proveedor.Nombre = row["nombre"].ToString();
+                    Proveedor.Direccion = row["direccion"].ToString();
                     lista.Add(Proveedor);
                 }
 
@@ -79,7 +79,7 @@ namespace NegocioSGA
 
         public bool Insert(MDProveedor nuevoProveedor)
         {
-            string nonQuery = $"INSERT INTO Proveedor (nombre_proveedor,direccion_proveedor) VALUES ('{nuevoProveedor.Nombre}','{nuevoProveedor.Direccion}')";
+            string nonQuery = $"INSERT INTO Proveedor (nombre,direccion) VALUES ('{nuevoProveedor.Nombre}','{nuevoProveedor.Direccion}')";
             return Conexion.NonQuery(nonQuery);
         }
 
@@ -94,7 +94,7 @@ namespace NegocioSGA
 
         public bool Update(int id, string nombre, string direccion)
         {
-            string nonQuery = $"UPDATE Proveedor SET nombre_proveedor = '{nombre}', direccion_proveedor = '{direccion}' WHERE id_proveedor = {id}";
+            string nonQuery = $"UPDATE Proveedor SET nombre = '{nombre}', direccion = '{direccion}' WHERE id_proveedor = {id}";
             return Conexion.NonQuery(nonQuery);
         }
 

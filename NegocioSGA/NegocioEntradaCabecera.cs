@@ -76,7 +76,30 @@ namespace NegocioSGA
             return lista;
         }
 
-        
+        public MDEntradaCabecera SelectLast()
+        {
+            string query = $"SELECT TOP (1) *, CONVERT(varchar(40), fecha, 22) as fechaUS FROM EntradaCabecera ORDER BY cod_entrada DESC";
+
+            DataTable table = Conexion.Select(query);
+
+            if (table != null && table.Rows.Count > 0)
+            {
+                EntradaCabecera = new MDEntradaCabecera();
+                EntradaCabecera.Cod_entrada = Convert.ToInt32(table.Rows[0]["cod_entrada"]);
+                EntradaCabecera.Fecha = DateTime.Parse(table.Rows[0]["fechaUS"].ToString(), CultureInfo.CreateSpecificCulture("en-US"));
+                EntradaCabecera.Id_proveedor = Convert.ToInt32(table.Rows[0]["id_proveedor"]);
+                EntradaCabecera.Id_bodega = Convert.ToInt32(table.Rows[0]["id_bodega"]);
+                EntradaCabecera.Rut_empleado = table.Rows[0]["rut_empleado"].ToString();
+            }
+            else
+            {
+                EntradaCabecera = null;
+            }
+
+            return EntradaCabecera;
+        }
+
+
         public bool Insert(MDEntradaCabecera nuevoEntradaCabecera)
         {
             return Insert(nuevoEntradaCabecera.Fecha, nuevoEntradaCabecera.Id_proveedor, nuevoEntradaCabecera.Id_bodega, nuevoEntradaCabecera.Rut_empleado);

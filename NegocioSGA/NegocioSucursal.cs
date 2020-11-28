@@ -35,8 +35,8 @@ namespace NegocioSGA
             {
                 Sucursal = new MDSucursal();
                 Sucursal.IdSucursal = Convert.ToInt32(table.Rows[0]["id_sucursal"]);
-                Sucursal.Nombre = table.Rows[0]["nombre_Sucursal"].ToString();
-                Sucursal.Direccion = table.Rows[0]["direccion_sucursal"].ToString();
+                Sucursal.Nombre = table.Rows[0]["nombre"].ToString();
+                Sucursal.Direccion = table.Rows[0]["direccion"].ToString();
             }
             else
             {
@@ -59,8 +59,8 @@ namespace NegocioSGA
                 {
                     Sucursal = new MDSucursal();
                     Sucursal.IdSucursal = Convert.ToInt32(row["id_sucursal"]);
-                    Sucursal.Nombre = row["nombre_Sucursal"].ToString();
-                    Sucursal.Direccion = row["direccion_sucursal"].ToString();
+                    Sucursal.Nombre = row["nombre"].ToString();
+                    Sucursal.Direccion = row["direccion"].ToString();
                     lista.Add(Sucursal);
                 }
 
@@ -79,7 +79,7 @@ namespace NegocioSGA
 
         public bool Insert(MDSucursal nuevoSucursal)
         {
-            string nonQuery = $"INSERT INTO Sucursal (nombre_sucursal) VALUES ('{nuevoSucursal.Nombre}')";
+            string nonQuery = $"INSERT INTO Sucursal (nombre, direccion) VALUES ('{nuevoSucursal.Nombre}', '{nuevoSucursal.Direccion}')";
             return Conexion.NonQuery(nonQuery);
         }
 
@@ -94,7 +94,7 @@ namespace NegocioSGA
 
         public bool Update(int id, string nombre, string direccion)
         {
-            string nonQuery = $"UPDATE Sucursal SET nombre_sucursal = '{nombre}', direccion_sucursal = '{direccion}' WHERE id_sucursal = {id}";
+            string nonQuery = $"UPDATE Sucursal SET nombre = '{nombre}', direccion = '{direccion}' WHERE id_sucursal = {id}";
             return Conexion.NonQuery(nonQuery);
         }
 

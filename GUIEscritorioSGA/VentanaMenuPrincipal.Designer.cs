@@ -113,13 +113,14 @@
             // entradaProductosToolStripMenuItem
             // 
             this.entradaProductosToolStripMenuItem.Name = "entradaProductosToolStripMenuItem";
-            this.entradaProductosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.entradaProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.entradaProductosToolStripMenuItem.Text = "Entrada Productos";
+            this.entradaProductosToolStripMenuItem.Click += new System.EventHandler(this.entradaProductosToolStripMenuItem_Click);
             // 
             // salidaProductosToolStripMenuItem
             // 
             this.salidaProductosToolStripMenuItem.Name = "salidaProductosToolStripMenuItem";
-            this.salidaProductosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.salidaProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salidaProductosToolStripMenuItem.Text = "Salida Productos";
             // 
             // informesToolStripMenuItem
@@ -140,14 +141,14 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 

@@ -71,6 +71,7 @@
     <Content Include="Web.config" />
     <Content Include="WebServiceBodega.asmx" />
     <Content Include="WebServiceEmpleado.asmx" />
+    <Content Include="WebServiceEntrada.asmx" />
     <Content Include="WebServiceProducto.asmx" />
     <Content Include="WebServiceProveedor.asmx" />
     <Content Include="WebServiceSucursal.asmx" />
@@ -84,6 +85,10 @@
     </Compile>
     <Compile Include="WebServiceEmpleado.asmx.cs">
       <DependentUpon>WebServiceEmpleado.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServiceEntrada.asmx.cs">
+      <DependentUpon>WebServiceEntrada.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WebServiceProducto.asmx.cs">

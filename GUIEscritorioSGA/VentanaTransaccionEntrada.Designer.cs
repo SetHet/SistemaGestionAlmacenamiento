@@ -51,7 +51,9 @@
             this.DataGridView_ProductosCantidad.AllowUserToDeleteRows = false;
             this.DataGridView_ProductosCantidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_ProductosCantidad.Location = new System.Drawing.Point(383, 12);
+            this.DataGridView_ProductosCantidad.MultiSelect = false;
             this.DataGridView_ProductosCantidad.Name = "DataGridView_ProductosCantidad";
+            this.DataGridView_ProductosCantidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView_ProductosCantidad.Size = new System.Drawing.Size(405, 297);
             this.DataGridView_ProductosCantidad.TabIndex = 0;
             // 
