@@ -4,17 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{718B92C2-6D65-45D6-AAED-7D224D4C4C74}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NegocioSGA</RootNamespace>
-    <AssemblyName>NegocioSGA</AssemblyName>
+    <ProjectGuid>{F5B43BCF-7047-444F-8C98-00B7116FB909}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleTenting</RootNamespace>
+    <AssemblyName>ConsoleTenting</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,6 +25,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,24 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfiguracionNegocioSGA.cs" />
-    <Compile Include="NegocioBodega.cs" />
-    <Compile Include="NegocioEmpleado.cs" />
-    <Compile Include="NegocioEntradaCabecera.cs" />
-    <Compile Include="NegocioProducto.cs" />
-    <Compile Include="NegocioProveedor.cs" />
-    <Compile Include="NegocioSucursal.cs" />
-    <Compile Include="NegocioTipoProducto.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConexionBD\ConexionBD.csproj">
-      <Project>{995351e9-63b4-45b0-8663-6d57a3559c8e}</Project>
-      <Name>ConexionBD</Name>
-    </ProjectReference>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\ModeloDatosSGA\ModeloDatosSGA.csproj">
       <Project>{043fc577-f3bb-46f3-b0fa-decfd58d8f70}</Project>
       <Name>ModeloDatosSGA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NegocioSGA\NegocioSGA.csproj">
+      <Project>{718b92c2-6d65-45d6-aaed-7d224d4c4c74}</Project>
+      <Name>NegocioSGA</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
