@@ -23,57 +23,57 @@ namespace ServicioSGA
         [WebMethod]
         public MDBodega Buscar(int id)
         {
-            NegocioBodega negocioBodega = new NegocioBodega();
+            NegocioBodega auxBodega = new NegocioBodega();
 
-            return negocioBodega.Select(id);
+            return auxBodega.Select(id);
         }
 
         [WebMethod]
         public List<MDBodega> BuscarAll()
         {
-            NegocioBodega negocioBodega = new NegocioBodega();
+            NegocioBodega auxBodega = new NegocioBodega();
 
-            return negocioBodega.Select();
+            return auxBodega.Select();
         }
 
         [WebMethod]
         public bool Delete(int id)
         {
-            NegocioBodega negocioBodega = new NegocioBodega();
+            NegocioBodega auxBodega = new NegocioBodega();
 
-            return negocioBodega.Delete(id);
+            return auxBodega.Delete(id);
         }
 
         [WebMethod]
         public bool InsertWithValues(string nombre, string direccion)
         {
-            NegocioBodega negocioBodega = new NegocioBodega();
+            NegocioBodega auxBodega = new NegocioBodega();
 
-            return negocioBodega.Insert(nombre, direccion);
+            return auxBodega.Insert(nombre, direccion);
         }
 
         [WebMethod]
         public bool Insert(MDBodega nuevoTipoProducto)
         {
-            NegocioBodega negocioBodega = new NegocioBodega();
+            NegocioBodega auxBodega = new NegocioBodega();
 
-            return negocioBodega.Insert(nuevoTipoProducto);
+            return auxBodega.Insert(nuevoTipoProducto);
         }
 
         [WebMethod]
         public bool UpdateWithValues(int id, string nombre, string direccion)
         {
-            NegocioBodega negocioBodega = new NegocioBodega();
+            NegocioBodega auxBodega = new NegocioBodega();
 
-            return negocioBodega.Update(id, nombre, direccion);
+            return auxBodega.Update(id, nombre, direccion);
         }
 
         [WebMethod]
         public bool Update(MDBodega editableBodega)
         {
-            NegocioBodega negocioBodega = new NegocioBodega();
+            NegocioBodega auxBodega = new NegocioBodega();
 
-            return negocioBodega.Update(editableBodega);
+            return auxBodega.Update(editableBodega);
         }
     }
 }

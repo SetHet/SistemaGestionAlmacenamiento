@@ -192,6 +192,7 @@
             this.Txt_Actual.TabIndex = 14;
             this.Txt_Actual.Text = "0 / 0";
             this.Txt_Actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Txt_Actual.TextChanged += new System.EventHandler(this.Txt_Actual_TextChanged);
             // 
             // VentanaMantenedorTipoProducto
             // 

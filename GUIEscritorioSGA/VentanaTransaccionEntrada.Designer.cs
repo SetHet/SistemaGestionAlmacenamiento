@@ -142,6 +142,7 @@
             this.ComboBox_Proveedor.Name = "ComboBox_Proveedor";
             this.ComboBox_Proveedor.Size = new System.Drawing.Size(213, 28);
             this.ComboBox_Proveedor.TabIndex = 8;
+            this.ComboBox_Proveedor.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Proveedor_SelectedIndexChanged);
             // 
             // label1
             // 

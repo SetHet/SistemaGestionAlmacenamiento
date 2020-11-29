@@ -30,6 +30,7 @@ namespace GUIEscritorioSGA
 
             try
             {
+                
                 empleado = auxServiceEmpleado.Login(rut, password);
             }
             catch (Exception ex)
@@ -84,6 +85,10 @@ namespace GUIEscritorioSGA
             Txt_Pass.Clear();
             Txt_Rut.Clear();
         }
-        
+
+        private void Txt_Rut_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

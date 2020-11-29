@@ -92,6 +92,36 @@
     <Compile Include="EmpleadoLogueado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentanaListaBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaListaBodega.Designer.cs">
+      <DependentUpon>VentanaListaBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaListaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaListaEmpleado.Designer.cs">
+      <DependentUpon>VentanaListaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaListaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaListaProducto.Designer.cs">
+      <DependentUpon>VentanaListaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaListaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaListaProveedor.Designer.cs">
+      <DependentUpon>VentanaListaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaListaSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaListaSucursal.Designer.cs">
+      <DependentUpon>VentanaListaSucursal.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaListaTipoProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +198,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VentanaListaBodega.resx">
+      <DependentUpon>VentanaListaBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaListaEmpleado.resx">
+      <DependentUpon>VentanaListaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaListaProducto.resx">
+      <DependentUpon>VentanaListaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaListaProveedor.resx">
+      <DependentUpon>VentanaListaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaListaSucursal.resx">
+      <DependentUpon>VentanaListaSucursal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaListaTipoProducto.resx">
       <DependentUpon>VentanaListaTipoProducto.cs</DependentUpon>
     </EmbeddedResource>

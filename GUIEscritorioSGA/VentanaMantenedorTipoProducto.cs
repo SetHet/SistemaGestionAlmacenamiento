@@ -209,5 +209,10 @@ namespace GUIEscritorioSGA
         {
 
         }
+
+        private void Txt_Actual_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

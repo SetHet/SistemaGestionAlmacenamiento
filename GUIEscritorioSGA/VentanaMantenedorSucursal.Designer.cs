@@ -28,74 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnNuevo = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnActualizar = new System.Windows.Forms.Button();
-            this.BtnListar = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
+            this.Btn_Nuevo = new System.Windows.Forms.Button();
+            this.Btn_Eliminar = new System.Windows.Forms.Button();
+            this.Btn_Actualizar = new System.Windows.Forms.Button();
+            this.Btn_Listar = new System.Windows.Forms.Button();
+            this.Btn_Salir = new System.Windows.Forms.Button();
             this.Btn_Primero = new System.Windows.Forms.Button();
             this.Btn_Anterior = new System.Windows.Forms.Button();
             this.Txt_Actual = new System.Windows.Forms.TextBox();
             this.Btn_Siguiente = new System.Windows.Forms.Button();
             this.Btn_Ultimo = new System.Windows.Forms.Button();
-            this.txt_DireccionSucursal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_IdSucursal = new System.Windows.Forms.TextBox();
-            this.Txt_NombreSucursal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Txt_NombreSucursal = new System.Windows.Forms.TextBox();
+            this.txt_DireccionSucursal = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // BtnNuevo
+            // Btn_Nuevo
             // 
-            this.BtnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNuevo.Location = new System.Drawing.Point(88, 261);
-            this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(95, 36);
-            this.BtnNuevo.TabIndex = 7;
-            this.BtnNuevo.Text = "Nuevo";
-            this.BtnNuevo.UseVisualStyleBackColor = true;
-            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
+            this.Btn_Nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Nuevo.Location = new System.Drawing.Point(88, 261);
+            this.Btn_Nuevo.Name = "Btn_Nuevo";
+            this.Btn_Nuevo.Size = new System.Drawing.Size(95, 36);
+            this.Btn_Nuevo.TabIndex = 7;
+            this.Btn_Nuevo.Text = "Nuevo";
+            this.Btn_Nuevo.UseVisualStyleBackColor = true;
+            this.Btn_Nuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
-            // BtnEliminar
+            // Btn_Eliminar
             // 
-            this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminar.Location = new System.Drawing.Point(220, 261);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(95, 36);
-            this.BtnEliminar.TabIndex = 8;
-            this.BtnEliminar.Text = "Eliminar";
-            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Eliminar.Location = new System.Drawing.Point(220, 261);
+            this.Btn_Eliminar.Name = "Btn_Eliminar";
+            this.Btn_Eliminar.Size = new System.Drawing.Size(95, 36);
+            this.Btn_Eliminar.TabIndex = 8;
+            this.Btn_Eliminar.Text = "Eliminar";
+            this.Btn_Eliminar.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
-            // BtnActualizar
+            // Btn_Actualizar
             // 
-            this.BtnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnActualizar.Location = new System.Drawing.Point(353, 261);
-            this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(95, 36);
-            this.BtnActualizar.TabIndex = 9;
-            this.BtnActualizar.Text = "Actualizar";
-            this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.Btn_Actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Actualizar.Location = new System.Drawing.Point(353, 261);
+            this.Btn_Actualizar.Name = "Btn_Actualizar";
+            this.Btn_Actualizar.Size = new System.Drawing.Size(95, 36);
+            this.Btn_Actualizar.TabIndex = 9;
+            this.Btn_Actualizar.Text = "Actualizar";
+            this.Btn_Actualizar.UseVisualStyleBackColor = true;
+            this.Btn_Actualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
-            // BtnListar
+            // Btn_Listar
             // 
-            this.BtnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnListar.Location = new System.Drawing.Point(475, 261);
-            this.BtnListar.Name = "BtnListar";
-            this.BtnListar.Size = new System.Drawing.Size(95, 36);
-            this.BtnListar.TabIndex = 10;
-            this.BtnListar.Text = "Listar";
-            this.BtnListar.UseVisualStyleBackColor = true;
+            this.Btn_Listar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Listar.Location = new System.Drawing.Point(475, 261);
+            this.Btn_Listar.Name = "Btn_Listar";
+            this.Btn_Listar.Size = new System.Drawing.Size(95, 36);
+            this.Btn_Listar.TabIndex = 10;
+            this.Btn_Listar.Text = "Listar";
+            this.Btn_Listar.UseVisualStyleBackColor = true;
+            this.Btn_Listar.Click += new System.EventHandler(this.BtnListar_Click);
             // 
-            // BtnSalir
+            // Btn_Salir
             // 
-            this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Location = new System.Drawing.Point(613, 261);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(95, 36);
-            this.BtnSalir.TabIndex = 11;
-            this.BtnSalir.Text = "Salir";
-            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.Btn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Salir.Location = new System.Drawing.Point(613, 261);
+            this.Btn_Salir.Name = "Btn_Salir";
+            this.Btn_Salir.Size = new System.Drawing.Size(95, 36);
+            this.Btn_Salir.TabIndex = 11;
+            this.Btn_Salir.Text = "Salir";
+            this.Btn_Salir.UseVisualStyleBackColor = true;
+            this.Btn_Salir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // Btn_Primero
             // 
@@ -153,15 +157,6 @@
             this.Btn_Ultimo.UseVisualStyleBackColor = true;
             this.Btn_Ultimo.Click += new System.EventHandler(this.Btn_Ultimo_Click);
             // 
-            // txt_DireccionSucursal
-            // 
-            this.txt_DireccionSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DireccionSucursal.Location = new System.Drawing.Point(409, 169);
-            this.txt_DireccionSucursal.Name = "txt_DireccionSucursal";
-            this.txt_DireccionSucursal.ReadOnly = true;
-            this.txt_DireccionSucursal.Size = new System.Drawing.Size(186, 26);
-            this.txt_DireccionSucursal.TabIndex = 49;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -191,15 +186,6 @@
             this.Txt_IdSucursal.Size = new System.Drawing.Size(186, 26);
             this.Txt_IdSucursal.TabIndex = 46;
             // 
-            // Txt_NombreSucursal
-            // 
-            this.Txt_NombreSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_NombreSucursal.Location = new System.Drawing.Point(409, 117);
-            this.Txt_NombreSucursal.Name = "Txt_NombreSucursal";
-            this.Txt_NombreSucursal.ReadOnly = true;
-            this.Txt_NombreSucursal.Size = new System.Drawing.Size(186, 26);
-            this.Txt_NombreSucursal.TabIndex = 45;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -210,27 +196,44 @@
             this.label2.TabIndex = 44;
             this.label2.Text = "Nombre Sucursal";
             // 
+            // Txt_NombreSucursal
+            // 
+            this.Txt_NombreSucursal.Location = new System.Drawing.Point(409, 110);
+            this.Txt_NombreSucursal.Multiline = true;
+            this.Txt_NombreSucursal.Name = "Txt_NombreSucursal";
+            this.Txt_NombreSucursal.Size = new System.Drawing.Size(186, 27);
+            this.Txt_NombreSucursal.TabIndex = 50;
+            // 
+            // txt_DireccionSucursal
+            // 
+            this.txt_DireccionSucursal.Location = new System.Drawing.Point(409, 162);
+            this.txt_DireccionSucursal.Multiline = true;
+            this.txt_DireccionSucursal.Name = "txt_DireccionSucursal";
+            this.txt_DireccionSucursal.Size = new System.Drawing.Size(186, 27);
+            this.txt_DireccionSucursal.TabIndex = 51;
+            this.txt_DireccionSucursal.TextChanged += new System.EventHandler(this.txt_DireccionSucursal_TextChanged);
+            // 
             // VentanaMantenedorSucursal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txt_DireccionSucursal);
+            this.Controls.Add(this.Txt_NombreSucursal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Txt_IdSucursal);
-            this.Controls.Add(this.Txt_NombreSucursal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Btn_Ultimo);
             this.Controls.Add(this.Btn_Siguiente);
             this.Controls.Add(this.Txt_Actual);
             this.Controls.Add(this.Btn_Anterior);
             this.Controls.Add(this.Btn_Primero);
-            this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.BtnListar);
-            this.Controls.Add(this.BtnActualizar);
-            this.Controls.Add(this.BtnEliminar);
-            this.Controls.Add(this.BtnNuevo);
+            this.Controls.Add(this.Btn_Salir);
+            this.Controls.Add(this.Btn_Listar);
+            this.Controls.Add(this.Btn_Actualizar);
+            this.Controls.Add(this.Btn_Eliminar);
+            this.Controls.Add(this.Btn_Nuevo);
             this.Name = "VentanaMantenedorSucursal";
             this.Text = "VentanaMantenedorSucursal";
             this.ResumeLayout(false);
@@ -239,21 +242,21 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button BtnNuevo;
-        private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.Button BtnActualizar;
-        private System.Windows.Forms.Button BtnListar;
-        private System.Windows.Forms.Button BtnSalir;
+        private System.Windows.Forms.Button Btn_Nuevo;
+        private System.Windows.Forms.Button Btn_Eliminar;
+        private System.Windows.Forms.Button Btn_Actualizar;
+        private System.Windows.Forms.Button Btn_Listar;
+        private System.Windows.Forms.Button Btn_Salir;
         private System.Windows.Forms.Button Btn_Primero;
         private System.Windows.Forms.Button Btn_Anterior;
         private System.Windows.Forms.TextBox Txt_Actual;
         private System.Windows.Forms.Button Btn_Siguiente;
         private System.Windows.Forms.Button Btn_Ultimo;
-        private System.Windows.Forms.TextBox txt_DireccionSucursal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Txt_IdSucursal;
-        private System.Windows.Forms.TextBox Txt_NombreSucursal;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox Txt_NombreSucursal;
+        private System.Windows.Forms.TextBox txt_DireccionSucursal;
     }
 }

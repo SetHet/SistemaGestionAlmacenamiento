@@ -75,6 +75,7 @@
             this.Txt_Rut.Size = new System.Drawing.Size(226, 30);
             this.Txt_Rut.TabIndex = 3;
             this.Txt_Rut.Text = "12.345.678-9";
+            this.Txt_Rut.TextChanged += new System.EventHandler(this.Txt_Rut_TextChanged);
             // 
             // Txt_Pass
             // 

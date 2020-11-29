@@ -44,6 +44,7 @@
             this.DataGridView_ListaTipoProducto.ReadOnly = true;
             this.DataGridView_ListaTipoProducto.Size = new System.Drawing.Size(434, 380);
             this.DataGridView_ListaTipoProducto.TabIndex = 0;
+            this.DataGridView_ListaTipoProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_ListaTipoProducto_CellContentClick);
             // 
             // Btn_Salir
             // 
