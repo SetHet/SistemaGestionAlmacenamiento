@@ -12,7 +12,7 @@ namespace ConsoleTenting
         static void Main(string[] args)
         {
             NegocioTipoProducto tp = new NegocioTipoProducto();
-            foreach (var item in tp.GetCantidadTipoProductoActual(4))
+            foreach (var item in tp.GetCantidadTipoProductoSalida())
             {
                 Console.WriteLine($"{item.Id_tipo_producto} : {item.Cantidad} ");
             }

@@ -101,7 +101,7 @@ namespace NegocioSGA
         }
 
 
-        public List<DTipoProductoCantidad> GetCantidadTipoProductoActual(int id_bodega)
+        public List<DTipoProductoCantidad> GetCantidadTipoProductoActualByBodega(int id_bodega)
         {
             List<DTipoProductoCantidad> lista = new List<DTipoProductoCantidad>();
             List<MDTipoProducto> listaTipoProducto = Select();
@@ -205,6 +205,128 @@ namespace NegocioSGA
                 $"ON (salDet.id_producto = prod.id_producto) " +
                 $"WHERE id_bodega = {id_bodega} " +
                 $"GROUP BY id_tipo_producto, id_bodega";
+
+            DataTable table = Conexion.Select(query);
+
+            if (table != null)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    tipoProductoCantidad = new DTipoProductoCantidad();
+                    tipoProductoCantidad.Id_tipo_producto = Convert.ToInt32(row["id_tipo"]);
+                    tipoProductoCantidad.Cantidad = Convert.ToInt32(row["cantidad"]);
+                    lista.Add(tipoProductoCantidad);
+                }
+            }
+
+            return lista;
+        }
+
+
+
+        ///////////////////////////////
+        public List<DTipoProductoCantidad> GetCantidadTipoProductoActual()
+        {
+            List<DTipoProductoCantidad> lista = new List<DTipoProductoCantidad>();
+            List<MDTipoProducto> listaTipoProducto = Select();
+            DTipoProductoCantidad tipoProductoCantidad;
+            int cant_salida;
+            int cant_entrada;
+
+            List<DTipoProductoCantidad> listaTipoProductoEntrada = GetCantidadTipoProductoEntrada();
+            Dictionary<int, int> diccTipoProductoCantidadEntrada = new Dictionary<int, int>();
+
+            List<DTipoProductoCantidad> listaTipoProductoSalida = GetCantidadTipoProductoSalida();
+            Dictionary<int, int> diccTipoProductoCantidadSalida = new Dictionary<int, int>();
+
+            //Rellenar dicc entrada
+            foreach (var id_cantidad in listaTipoProductoEntrada)
+            {
+                diccTipoProductoCantidadEntrada[id_cantidad.Id_tipo_producto] = id_cantidad.Cantidad;
+            }
+
+            //Rellenar dicc salida
+            foreach (var id_cantidad in listaTipoProductoSalida)
+            {
+                diccTipoProductoCantidadSalida[id_cantidad.Id_tipo_producto] = id_cantidad.Cantidad;
+            }
+
+            //rellenar lista
+            foreach (var tipo in listaTipoProducto)
+            {
+                tipoProductoCantidad = new DTipoProductoCantidad();
+                tipoProductoCantidad.Id_tipo_producto = tipo.IdTipoProducto;
+
+                cant_entrada = 0;
+                cant_salida = 0;
+
+                if (diccTipoProductoCantidadEntrada.ContainsKey(tipo.IdTipoProducto))
+                {
+                    cant_entrada = diccTipoProductoCantidadEntrada[tipo.IdTipoProducto];
+                }
+
+                if (diccTipoProductoCantidadSalida.ContainsKey(tipo.IdTipoProducto))
+                {
+                    cant_salida = diccTipoProductoCantidadSalida[tipo.IdTipoProducto];
+                }
+
+                tipoProductoCantidad.Cantidad = cant_entrada - cant_salida;
+
+                lista.Add(tipoProductoCantidad);
+            }
+
+
+
+            return lista;
+        }
+
+        public List<DTipoProductoCantidad> GetCantidadTipoProductoEntrada()
+        {
+            List<DTipoProductoCantidad> lista = new List<DTipoProductoCantidad>();
+            DTipoProductoCantidad tipoProductoCantidad;
+
+            string query = $"SELECT " +
+                $"prod.id_tipo_producto as id_tipo, " +
+                $"SUM(ISNULL(entDet.cantidad, 0)) as cantidad " +
+                $"FROM producto prod " +
+                $"LEFT JOIN " +
+                $"(EntradaDetalle entDet " +
+                $"JOIN EntradaCabecera entCab " +
+                $"ON(entCab.cod_entrada = entDet.cod_entrada)) " +
+                $"ON(entDet.id_producto = prod.id_producto) " +
+                $"GROUP BY id_tipo_producto";
+
+            DataTable table = Conexion.Select(query);
+
+            if (table != null)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    tipoProductoCantidad = new DTipoProductoCantidad();
+                    tipoProductoCantidad.Id_tipo_producto = Convert.ToInt32(row["id_tipo"]);
+                    tipoProductoCantidad.Cantidad = Convert.ToInt32(row["cantidad"]);
+                    lista.Add(tipoProductoCantidad);
+                }
+            }
+
+            return lista;
+        }
+
+        public List<DTipoProductoCantidad> GetCantidadTipoProductoSalida()
+        {
+            List<DTipoProductoCantidad> lista = new List<DTipoProductoCantidad>();
+            DTipoProductoCantidad tipoProductoCantidad;
+
+            string query = $"SELECT " +
+                $"prod.id_tipo_producto as id_tipo, " +
+                $"SUM(ISNULL(salDet.cantidad, 0)) as cantidad " +
+                $"FROM producto prod " +
+                $"LEFT JOIN (" +
+                $"SalidaDetalle salDet " +
+                $"JOIN SalidaCabecera salCab " +
+                $"ON (salCab.cod_salida = salDet.cod_salida)) " +
+                $"ON (salDet.id_producto = prod.id_producto) " +
+                $"GROUP BY id_tipo_producto";
 
             DataTable table = Conexion.Select(query);
 
