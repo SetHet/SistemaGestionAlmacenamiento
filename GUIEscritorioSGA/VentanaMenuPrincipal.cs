@@ -94,5 +94,11 @@ namespace GUIEscritorioSGA
             VentanaInformeMoreSalida ventanaInformeMoreSalida = new VentanaInformeMoreSalida();
             ventanaInformeMoreSalida.ShowDialog();
         }
+
+        private void stockTipoProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VentanaInformeStockTipoProducto ventanaInformeStockTipoProducto = new VentanaInformeStockTipoProducto();
+            ventanaInformeStockTipoProducto.ShowDialog();
+        }
     }
 }
