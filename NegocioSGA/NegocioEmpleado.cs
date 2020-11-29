@@ -85,10 +85,10 @@ namespace NegocioSGA
                 foreach (DataRow row in table.Rows)
                 {
                     Empleado = new MDEmpleado();
-                    Empleado.Rut = table.Rows[0]["rut_empleado"].ToString();
-                    Empleado.Nombre = table.Rows[0]["nombre"].ToString();
-                    Empleado.Apellido = table.Rows[0]["apellido"].ToString();
-                    Empleado.Password = table.Rows[0]["password"].ToString();
+                    Empleado.Rut = row["rut_empleado"].ToString();
+                    Empleado.Nombre = row["nombre"].ToString();
+                    Empleado.Apellido = row["apellido"].ToString();
+                    Empleado.Password = row["password"].ToString();
                     lista.Add(Empleado);
                 }
 

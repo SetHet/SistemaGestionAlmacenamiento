@@ -212,7 +212,9 @@ namespace GUIEscritorioSGA
 
         private void Btn_Salir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Dispose();
+            GC.Collect();
+            this.Close();
         }
 
         private void Btn_Primero_Click(object sender, EventArgs e)
