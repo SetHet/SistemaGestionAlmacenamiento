@@ -138,6 +138,7 @@
             // 
             this.DataGridView_ProductosCantidad.AllowUserToAddRows = false;
             this.DataGridView_ProductosCantidad.AllowUserToDeleteRows = false;
+            this.DataGridView_ProductosCantidad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DataGridView_ProductosCantidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_ProductosCantidad.Location = new System.Drawing.Point(422, 13);
             this.DataGridView_ProductosCantidad.MultiSelect = false;

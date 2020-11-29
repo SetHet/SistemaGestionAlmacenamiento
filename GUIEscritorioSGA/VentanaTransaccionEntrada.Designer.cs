@@ -130,7 +130,7 @@
             this.Btn_Salir.Name = "Btn_Salir";
             this.Btn_Salir.Size = new System.Drawing.Size(119, 35);
             this.Btn_Salir.TabIndex = 7;
-            this.Btn_Salir.Text = "Salir";
+            this.Btn_Salir.Text = "Cancelar";
             this.Btn_Salir.UseVisualStyleBackColor = true;
             this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 

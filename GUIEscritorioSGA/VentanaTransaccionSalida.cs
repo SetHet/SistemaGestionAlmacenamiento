@@ -118,6 +118,26 @@ namespace GUIEscritorioSGA
             Txt_Empleado.Text = EmpleadoLogueado.Empleado.Rut;
         }
 
+        private void ActualizarListaProductos()
+        {
+            DataGridView_ProductosCantidad.DataSource = ListaProductoCantidad;
+            DataGridView_ProductosCantidad.Update();
+            DataGridView_ProductosCantidad.Refresh();
+        }
+
+        private bool isSelectedProducto()
+        {
+            return DataGridView_ProductosCantidad.SelectedRows.Count > 0;
+        }
+
+        private int SelectedProducto()
+        {
+            if (isSelectedProducto())
+            {
+                return DataGridView_ProductosCantidad.SelectedRows[0].Index;
+            }
+            return -1;
+        }
 
 
         #endregion
@@ -137,37 +157,118 @@ namespace GUIEscritorioSGA
 
         private void Btn_Completar_Click(object sender, EventArgs e)
         {
+            ListaProductoCantidadSalida = new List<ServiceSalida.DProductoCantidad>();
+            ServiceSalida.DProductoCantidad auxProductoCantidadSalida;
 
+            foreach (var productoCantidad in ListaProductoCantidad)
+            {
+                if (productoCantidad.Cantidad > 0)
+                {
+                    auxProductoCantidadSalida = new ServiceSalida.DProductoCantidad();
+                    auxProductoCantidadSalida.IdProducto = productoCantidad.Id;
+                    auxProductoCantidadSalida.Cantidad = productoCantidad.Cantidad;
+                    ListaProductoCantidadSalida.Add(auxProductoCantidadSalida);
+                }
+            }
+
+            if (ListaProductoCantidadSalida.Count <= 0)
+            {
+                //No se acepta
+                MessageBox.Show("La cantidad de productos seleccionada es 0, agregue productos para completar", "Sistema");
+                return;
+            }
+
+            int id_bodega = ListaBodegas[ComboBox_Bodega.SelectedIndex].IdBodega;
+            int id_sucursal = ListaSucursales[ComboBox_Sucursal.SelectedIndex].IdSucursal;
+            string rut_empleado = Txt_Empleado.Text;
+
+            bool respuesta = AuxServiceSalida.Guardar(id_sucursal, id_bodega, rut_empleado, ListaProductoCantidadSalida.ToArray());
+
+            if (respuesta)
+            {
+                MessageBox.Show("Se han guardado toda la Salida de Productos");
+                CargarContenido();
+            }
+            else
+            {
+                MessageBox.Show("No se han guardado toda la Salida de Productos");
+            }
         }
 
         private void Btn_Cant_0_Click(object sender, EventArgs e)
         {
-
+            if (isSelectedProducto())
+            {
+                int index = SelectedProducto();
+                ListaProductoCantidad[index].Cantidad = 0;
+                ActualizarListaProductos();
+            }
         }
 
         private void Btn_Cant_menos10_Click(object sender, EventArgs e)
         {
-
+            if (isSelectedProducto())
+            {
+                int index = SelectedProducto();
+                ListaProductoCantidad[index].Cantidad -= 10;
+                if (ListaProductoCantidad[index].Cantidad < 0)
+                {
+                    ListaProductoCantidad[index].Cantidad = 0;
+                }
+                ActualizarListaProductos();
+            }
         }
 
         private void Btn_Cant_menos1_Click(object sender, EventArgs e)
         {
-
+            if (isSelectedProducto())
+            {
+                int index = SelectedProducto();
+                ListaProductoCantidad[index].Cantidad -= 1;
+                if (ListaProductoCantidad[index].Cantidad < 0)
+                {
+                    ListaProductoCantidad[index].Cantidad = 0;
+                }
+                ActualizarListaProductos();
+            }
         }
 
         private void Btn_Cant_mas1_Click(object sender, EventArgs e)
         {
-
+            if (isSelectedProducto())
+            {
+                int index = SelectedProducto();
+                ListaProductoCantidad[index].Cantidad += 1;
+                if (ListaProductoCantidad[index].Cantidad > ListaProductoCantidad[index].Max)
+                {
+                    ListaProductoCantidad[index].Cantidad = ListaProductoCantidad[index].Max;
+                }
+                ActualizarListaProductos();
+            }
         }
 
         private void Btn_Cant_mas10_Click(object sender, EventArgs e)
         {
-
+            if (isSelectedProducto())
+            {
+                int index = SelectedProducto();
+                ListaProductoCantidad[index].Cantidad += 10;
+                if (ListaProductoCantidad[index].Cantidad > ListaProductoCantidad[index].Max)
+                {
+                    ListaProductoCantidad[index].Cantidad = ListaProductoCantidad[index].Max;
+                }
+                ActualizarListaProductos();
+            }
         }
 
         private void Btn_Cant_max_Click(object sender, EventArgs e)
         {
-
+            if (isSelectedProducto())
+            {
+                int index = SelectedProducto();
+                ListaProductoCantidad[index].Cantidad = ListaProductoCantidad[index].Max;
+                ActualizarListaProductos();
+            }
         }
 
         private void ComboBox_Bodega_SelectedIndexChanged(object sender, EventArgs e)
@@ -200,8 +301,12 @@ namespace GUIEscritorioSGA
             }
 
             //Asignar al data grid view
-            DataGridView_ProductosCantidad.DataSource = ListaProductoCantidad;
+            ActualizarListaProductos();
+            
+
         }
+
+        
 
         #endregion
     }
