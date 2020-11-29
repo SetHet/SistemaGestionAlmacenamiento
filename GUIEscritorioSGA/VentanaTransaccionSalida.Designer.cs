@@ -203,6 +203,7 @@
             this.ComboBox_Bodega.Name = "ComboBox_Bodega";
             this.ComboBox_Bodega.Size = new System.Drawing.Size(234, 28);
             this.ComboBox_Bodega.TabIndex = 14;
+            this.ComboBox_Bodega.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Bodega_SelectedIndexChanged);
             // 
             // VentanaTransaccionSalida
             // 
