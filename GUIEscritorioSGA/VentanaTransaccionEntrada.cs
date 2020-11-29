@@ -72,6 +72,25 @@ namespace GUIEscritorioSGA
 
         #region Funciones
 
+        private bool FaltanProveedoresOBodegas()
+        {
+            bool faltaAlgo = false;
+
+            if (ListaProveedores.Count == 0)
+            {
+                MessageBox.Show($"No se han encontrado Proveedores, necesita ir al mantenedor y agregar alguno");
+                faltaAlgo = true;
+            }
+
+            if (ListaBodegas.Count == 0)
+            {
+                MessageBox.Show($"No se han encontrado Bodegas, necesita ir al mantenedor y agregar alguno");
+                faltaAlgo = true;
+            }
+
+            return faltaAlgo;
+        }
+
         private void CargarContenido()
         {
             AuxServiceEntrada = new WebServiceEntradaSoapClient();
@@ -119,6 +138,11 @@ namespace GUIEscritorioSGA
 
         private void RellenarProductos()
         {
+            if (FaltanProveedoresOBodegas())
+            {
+                return;
+            }
+
             ListaProductos = AuxServiceProducto.BuscarAll().ToList();
             ListaIDProductoCantidad = new List<DataIDProductoCantidad>();
             DataIDProductoCantidad auxDataIDProductoCantidad;
@@ -167,6 +191,11 @@ namespace GUIEscritorioSGA
 
         private void Btn_Completar_Click(object sender, EventArgs e)
         {
+            if (FaltanProveedoresOBodegas())
+            {
+                return;
+            }
+
             ListaProductoCantidad = new List<ServiceEntrada.DProductoCantidad>();
             ServiceEntrada.DProductoCantidad auxProductoCantidad;
 

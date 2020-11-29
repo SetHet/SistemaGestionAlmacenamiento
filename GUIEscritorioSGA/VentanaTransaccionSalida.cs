@@ -75,6 +75,25 @@ namespace GUIEscritorioSGA
 
         #region Funciones
 
+        private  bool FaltanSucursalesOBodegas()
+        {
+            bool faltaAlgo = false;
+
+            if (ListaSucursales.Count == 0)
+            {
+                MessageBox.Show($"No se han encontrado Sucursales, Necesita ir al mantenedor y agregar alguno");
+                faltaAlgo = true;
+            }
+
+            if (ListaBodegas.Count == 0)
+            {
+                MessageBox.Show($"No se han encontrado Bodegas, Necesita ir al mantenedor y agregar alguno");
+                faltaAlgo = true;
+            }
+
+            return faltaAlgo;
+        }
+
         private void CargarContenido()
         {
             AuxServiceSucursal = new WebServiceSucursalSoapClient();
@@ -85,12 +104,16 @@ namespace GUIEscritorioSGA
             CargarSucursales();
             CargarBodegas();
             CargarEmpleado();
+
+            
         }
 
         public void CargarSucursales()
         {
             ListaSucursales = AuxServiceSucursal.BuscarAll().ToList();
             ListaSucursalesString = new List<string>();
+            
+            
 
             foreach (var sucursal in ListaSucursales)
             {
@@ -104,6 +127,8 @@ namespace GUIEscritorioSGA
         {
             ListaBodegas = AuxServiceBodega.BuscarAll().ToList();
             ListaBodegasString = new List<string>();
+            
+            
 
             foreach (var bodega in ListaBodegas)
             {
@@ -157,6 +182,11 @@ namespace GUIEscritorioSGA
 
         private void Btn_Completar_Click(object sender, EventArgs e)
         {
+            if (FaltanSucursalesOBodegas())
+            {
+                return;
+            }
+
             ListaProductoCantidadSalida = new List<ServiceSalida.DProductoCantidad>();
             ServiceSalida.DProductoCantidad auxProductoCantidadSalida;
 
@@ -273,6 +303,11 @@ namespace GUIEscritorioSGA
 
         private void ComboBox_Bodega_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (FaltanSucursalesOBodegas())
+            {
+                return;
+            }
+
             ListaProductos = AuxServiceProducto.BuscarAll().ToList();
             int id_bodega = ListaBodegas[ComboBox_Bodega.SelectedIndex].IdBodega;
             ListaProductoCantidadMaxima = AuxServiceProducto.GetCantidadProductoDifferenciaByBodega(id_bodega).ToList();
