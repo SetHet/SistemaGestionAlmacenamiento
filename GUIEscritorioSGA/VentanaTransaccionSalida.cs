@@ -283,7 +283,10 @@ namespace GUIEscritorioSGA
             //Pasar los valores maximos al dicc
             foreach (var productoCantidadMax in ListaProductoCantidadMaxima)
             {
-                diccProductoCantidadMaxima[productoCantidadMax.IdProducto] = productoCantidadMax.Cantidad;
+                if (productoCantidadMax.Cantidad > 0)
+                {
+                    diccProductoCantidadMaxima[productoCantidadMax.IdProducto] = productoCantidadMax.Cantidad;
+                }
             }
 
             //Crear la lista de productos con stock

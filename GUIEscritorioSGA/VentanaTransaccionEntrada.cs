@@ -172,15 +172,24 @@ namespace GUIEscritorioSGA
 
             foreach (var itemIDProductoCantidad in ListaIDProductoCantidad)
             {
-                auxProductoCantidad = new ServiceEntrada.DProductoCantidad();
-                auxProductoCantidad.Cantidad = itemIDProductoCantidad.Cantidad;
-                auxProductoCantidad.IdProducto = itemIDProductoCantidad.Id;
-                ListaProductoCantidad.Add(auxProductoCantidad);
+                if (itemIDProductoCantidad.Cantidad > 0)
+                {
+                    auxProductoCantidad = new ServiceEntrada.DProductoCantidad();
+                    auxProductoCantidad.Cantidad = itemIDProductoCantidad.Cantidad;
+                    auxProductoCantidad.IdProducto = itemIDProductoCantidad.Id;
+                    ListaProductoCantidad.Add(auxProductoCantidad);
+                }
             }
 
             int id_bodega = ListaBodegas[ComboBox_Bodega.SelectedIndex].IdBodega;
             int id_proveedor = ListaProveedores[ComboBox_Proveedor.SelectedIndex].IdProveedor;
             string rut_empleado = Txt_Empleado.Text;
+
+            if (ListaProductoCantidad.Count <= 0)
+            {
+                MessageBox.Show("Se han seleccionado 0 productos, Ingrese alguno para poder completar la entrada");
+                return;
+            }
 
             bool resultadoGuardado = AuxServiceEntrada.Guardar(id_proveedor, id_bodega, rut_empleado, ListaProductoCantidad.ToArray());
 
