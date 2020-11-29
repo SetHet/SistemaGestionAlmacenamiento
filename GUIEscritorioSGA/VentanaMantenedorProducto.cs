@@ -199,7 +199,9 @@ namespace GUIEscritorioSGA
 
         private void Btn_Salir_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Dispose();
+            GC.Collect();
+            this.Close();
         }
 
         private void Btn_Primero_Click(object sender, EventArgs e)
@@ -224,6 +226,11 @@ namespace GUIEscritorioSGA
         {
             PosicionLista = auxListaProducto.Count - 1;
             ActualizarPantalla();
+        }
+
+        private void Cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

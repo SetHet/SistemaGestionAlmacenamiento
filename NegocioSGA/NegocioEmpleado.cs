@@ -99,9 +99,11 @@ namespace NegocioSGA
             return lista;
         }
 
+        
         public bool Delete(string rut)
         {
-            string nonQuery = $"DELETE FROM Empleado WHERE rut_empleado = {rut}";
+            Console.WriteLine("hola");
+            string nonQuery = $"DELETE FROM Empleado WHERE rut_empleado = '{rut}'";
             return Conexion.NonQuery(nonQuery);
         }
 
@@ -123,7 +125,7 @@ namespace NegocioSGA
 
         public bool Update(string rut, string nombre, string apellido, string password)
         {
-            string nonQuery = $"UPDATE Empleado SET rut_empleado = '{rut}',nombre = '{nombre}', apellido = '{apellido}',password = '{password}' WHERE rut_empleado = {rut}";
+            string nonQuery = $"UPDATE Empleado SET nombre = '{nombre}', apellido = '{apellido}',password = '{password}' WHERE rut_empleado = '{rut}'";
             return Conexion.NonQuery(nonQuery);
         }
 

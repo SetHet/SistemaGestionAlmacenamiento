@@ -94,119 +94,7 @@ namespace GUIEscritorioSGA
             }
         }
 
-        private void Btn_Salir_Click(object sender, EventArgs e)
-        {
-            if (EnGuardado)
-            {
-                TerminarGuardado();
-            }
-            else
-            {
-                this.Dispose();
-                GC.Collect();
-                this.Close();
-            }
-        }
-
-        private void Btn_Nuevo_Click(object sender, EventArgs e)
-        {
-            if (EnGuardado)
-            {
-                if (Txt_NombreBodega.Text.Equals(string.Empty))
-                {
-                    MessageBox.Show("Ingresar un nombre de Bodega Correcto", "Sistema");
-                    return;
-                }
-                if (txt_DireccionBodega.Text.Equals(string.Empty))
-                {
-                    MessageBox.Show("Ingresar una direccion de Bodega Correcto", "Sistema");
-                    return;
-                }    
-
-
-                auxServiceBodega.InsertWithValues(Txt_NombreBodega.Text,txt_DireccionBodega.Text);
-                TerminarGuardado();
-            }
-            else
-            {
-                ComenzarGuardado();
-            }
-        }
-
-        private void Btn_Listar_Click(object sender, EventArgs e)
-        {
-            VentanaListaBodega auxListaBodega = new VentanaListaBodega();
-            auxListaBodega.ShowDialog();
-        }
-
-        private void Btn_Actualizar_Click(object sender, EventArgs e)
-        {
-            if (Txt_NombreBodega.Text.Equals(string.Empty))
-            {
-                MessageBox.Show("Para actualizar se necesita ingresar un nombre de tipo valido.", "Sistema");
-                return;
-            }
-            if (auxListaBodega.Count > 0)
-            {
-                bool resultado = auxServiceBodega.UpdateWithValues(int.Parse(Txt_IdBodega.Text), Txt_NombreBodega.Text , txt_DireccionBodega.Text);
-                if (resultado == false)
-                {
-                    MessageBox.Show("No se puede actualizar el elemento.", "Sistema");
-                }
-                else
-                {
-                    ActualizarLista();
-                }
-            }
-            else
-            {
-                MessageBox.Show("No hay elementos que Actualizar.", "Sistema");
-            }
-        }
-
-        private void Btn_Eliminar_Click(object sender, EventArgs e)
-        {
-            if (auxListaBodega.Count > 0)
-            {
-                bool resultado = auxServiceBodega.Delete(int.Parse(Txt_IdBodega.Text));
-                if (resultado == false)
-                {
-                    MessageBox.Show("No se puede eliminar el elemento.", "Sistema");
-                }
-                else
-                {
-                    ActualizarLista();
-                }
-            }
-            else
-            {
-                MessageBox.Show("No hay elementos que Eliminar.", "Sistema");
-            }
-        }
-
-        private void Btn_Ultimo_Click(object sender, EventArgs e)
-        {
-            PosicionLista = auxListaBodega.Count - 1;
-            ActualizarPantalla();
-        }
-
-        private void Btn_Siguiente_Click(object sender, EventArgs e)
-        {
-            PosicionLista += 1;
-            ActualizarPantalla();
-        }
-
-        private void Btn_Anterior_Click(object sender, EventArgs e)
-        {
-            PosicionLista -= 1;
-            ActualizarPantalla();
-        }
-
-        private void Btn_Primero_Click(object sender, EventArgs e)
-        {
-            PosicionLista = 0;
-            ActualizarPantalla();
-        }
+       
 
         private void Txt_IdBodega_TextChanged(object sender, EventArgs e)
         {
@@ -220,7 +108,16 @@ namespace GUIEscritorioSGA
 
         private void Btn_Salir_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (EnGuardado)
+            {
+                TerminarGuardado();
+            }
+            else
+            {
+                this.Dispose();
+                GC.Collect();
+                this.Close();
+            }
         }
 
         private void Btn_Nuevo_Click_1(object sender, EventArgs e)

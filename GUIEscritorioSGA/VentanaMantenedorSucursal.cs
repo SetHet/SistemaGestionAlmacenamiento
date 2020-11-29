@@ -236,7 +236,16 @@ namespace GUIEscritorioSGA
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if(EnGuardado)
+            {
+                TerminarGuardado();
+            }
+            else
+            {
+                this.Dispose();
+                GC.Collect();
+                this.Close();
+            }
         }
 
     
