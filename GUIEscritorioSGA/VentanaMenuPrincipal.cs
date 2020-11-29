@@ -76,5 +76,23 @@ namespace GUIEscritorioSGA
             VentanaMantenedorEmpleado ventanaMantenedorEmpleado = new VentanaMantenedorEmpleado();
             ventanaMantenedorEmpleado.ShowDialog();
         }
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VentanaInformeMoreStock ventanaInformeMoreStock = new VentanaInformeMoreStock();
+            ventanaInformeMoreStock.ShowDialog();
+        }
+
+        private void entradaDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VentanaInformeMoreEntrada ventanaInformeMoreEntrada = new VentanaInformeMoreEntrada();
+            ventanaInformeMoreEntrada.ShowDialog();
+        }
+
+        private void salidaDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VentanaInformeMoreSalida ventanaInformeMoreSalida = new VentanaInformeMoreSalida();
+            ventanaInformeMoreSalida.ShowDialog();
+        }
     }
 }
