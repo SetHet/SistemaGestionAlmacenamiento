@@ -11,20 +11,23 @@ namespace ConsoleTenting
     {
         static void Main(string[] args)
         {
-            List<MDSalidaDetalle> lista;
+            NegocioProducto neg = new NegocioProducto();
 
-            var ned = new NegocioSalidaDetalle();
-            ned.Insert(2,1,15);
-
-            var ee = ned.Select(1,1); 
-                Console.WriteLine($"Select(1):  {ee.Cod_salida} {ee.Id_producto} {ee.Cantidad}");
-
-            lista = ned.Select();
-
-            foreach (var e in lista)
+            int id = 2;
+            Console.WriteLine("Entrada");
+            foreach (var a in neg.GetCantidadProductoEntrada())
             {
-
-                Console.WriteLine($"Select:  {e.Cod_salida} {e.Id_producto} {e.Cantidad}");
+                Console.WriteLine($"{a.IdProducto} : {a.Cantidad} ");
+            }
+            Console.WriteLine("Salida");
+            foreach (var a in neg.GetCantidadProductoSalida())
+            {
+                Console.WriteLine($"{a.IdProducto} : {a.Cantidad} ");
+            }
+            Console.WriteLine("Diff");
+            foreach (var a in neg.GetCantidadProductos())
+            {
+                Console.WriteLine($"{a.IdProducto} : {a.Cantidad} ");
             }
 
             Console.ReadKey();
