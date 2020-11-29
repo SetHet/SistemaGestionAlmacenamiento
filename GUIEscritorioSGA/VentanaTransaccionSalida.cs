@@ -26,6 +26,11 @@ namespace GUIEscritorioSGA
 
         private List<ServiceBodega.MDBodega> listaBodegas;
         private List<string> listaBodegasString;
+
+        private List<ServiceProducto.MDProducto> listaProductos;
+        //private List<ServiceProducto.DProductoCantidad> listaProductoCantidadMaxima;
+
+        private List<ServiceSalida.DProductoCantidad> listaProductoCantidadSalida;
         #endregion
 
         #region Propiedades
