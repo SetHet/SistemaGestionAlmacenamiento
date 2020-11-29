@@ -55,6 +55,7 @@
             this.Btn_Completar.TabIndex = 0;
             this.Btn_Completar.Text = "Completar";
             this.Btn_Completar.UseVisualStyleBackColor = true;
+            this.Btn_Completar.Click += new System.EventHandler(this.Btn_Completar_Click);
             // 
             // Btn_Cancelar
             // 
@@ -65,6 +66,7 @@
             this.Btn_Cancelar.TabIndex = 1;
             this.Btn_Cancelar.Text = "Cancelar";
             this.Btn_Cancelar.UseVisualStyleBackColor = true;
+            this.Btn_Cancelar.Click += new System.EventHandler(this.Btn_Cancelar_Click);
             // 
             // Btn_Cant_max
             // 
@@ -75,6 +77,7 @@
             this.Btn_Cant_max.TabIndex = 2;
             this.Btn_Cant_max.Text = "Max";
             this.Btn_Cant_max.UseVisualStyleBackColor = true;
+            this.Btn_Cant_max.Click += new System.EventHandler(this.Btn_Cant_max_Click);
             // 
             // Btn_Cant_mas10
             // 
@@ -85,6 +88,7 @@
             this.Btn_Cant_mas10.TabIndex = 3;
             this.Btn_Cant_mas10.Text = "+10";
             this.Btn_Cant_mas10.UseVisualStyleBackColor = true;
+            this.Btn_Cant_mas10.Click += new System.EventHandler(this.Btn_Cant_mas10_Click);
             // 
             // Btn_Cant_mas1
             // 
@@ -95,6 +99,7 @@
             this.Btn_Cant_mas1.TabIndex = 4;
             this.Btn_Cant_mas1.Text = "+1";
             this.Btn_Cant_mas1.UseVisualStyleBackColor = true;
+            this.Btn_Cant_mas1.Click += new System.EventHandler(this.Btn_Cant_mas1_Click);
             // 
             // Btn_Cant_menos1
             // 
@@ -105,6 +110,7 @@
             this.Btn_Cant_menos1.TabIndex = 5;
             this.Btn_Cant_menos1.Text = "-1";
             this.Btn_Cant_menos1.UseVisualStyleBackColor = true;
+            this.Btn_Cant_menos1.Click += new System.EventHandler(this.Btn_Cant_menos1_Click);
             // 
             // Btn_Cant_menos10
             // 
@@ -115,6 +121,7 @@
             this.Btn_Cant_menos10.TabIndex = 6;
             this.Btn_Cant_menos10.Text = "-10";
             this.Btn_Cant_menos10.UseVisualStyleBackColor = true;
+            this.Btn_Cant_menos10.Click += new System.EventHandler(this.Btn_Cant_menos10_Click);
             // 
             // Btn_Cant_0
             // 
@@ -125,12 +132,18 @@
             this.Btn_Cant_0.TabIndex = 7;
             this.Btn_Cant_0.Text = "0";
             this.Btn_Cant_0.UseVisualStyleBackColor = true;
+            this.Btn_Cant_0.Click += new System.EventHandler(this.Btn_Cant_0_Click);
             // 
             // DataGridView_ProductosCantidad
             // 
+            this.DataGridView_ProductosCantidad.AllowUserToAddRows = false;
+            this.DataGridView_ProductosCantidad.AllowUserToDeleteRows = false;
             this.DataGridView_ProductosCantidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_ProductosCantidad.Location = new System.Drawing.Point(422, 13);
+            this.DataGridView_ProductosCantidad.MultiSelect = false;
             this.DataGridView_ProductosCantidad.Name = "DataGridView_ProductosCantidad";
+            this.DataGridView_ProductosCantidad.ReadOnly = true;
+            this.DataGridView_ProductosCantidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView_ProductosCantidad.Size = new System.Drawing.Size(366, 302);
             this.DataGridView_ProductosCantidad.TabIndex = 8;
             // 
