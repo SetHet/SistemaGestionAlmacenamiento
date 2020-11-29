@@ -110,6 +110,12 @@
     <Compile Include="VentanaInformeMoreStock.Designer.cs">
       <DependentUpon>VentanaInformeMoreStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaInformeStockTipoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaInformeStockTipoProducto.Designer.cs">
+      <DependentUpon>VentanaInformeStockTipoProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaListaBodega.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaInformeMoreStock.resx">
       <DependentUpon>VentanaInformeMoreStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaInformeStockTipoProducto.resx">
+      <DependentUpon>VentanaInformeStockTipoProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaListaBodega.resx">
       <DependentUpon>VentanaListaBodega.cs</DependentUpon>
