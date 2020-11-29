@@ -15,17 +15,17 @@ namespace ConsoleTenting
 
             int id = 2;
             Console.WriteLine("Entrada");
-            foreach (var a in neg.GetCantidadProductoEntrada(id))
+            foreach (var a in neg.GetCantidadProductoEntrada())
             {
                 Console.WriteLine($"{a.IdProducto} : {a.Cantidad} ");
             }
             Console.WriteLine("Salida");
-            foreach (var a in neg.GetCantidadProductoSalida(id))
+            foreach (var a in neg.GetCantidadProductoSalida())
             {
                 Console.WriteLine($"{a.IdProducto} : {a.Cantidad} ");
             }
             Console.WriteLine("Diff");
-            foreach (var a in neg.GetCantidadProductos(id))
+            foreach (var a in neg.GetCantidadProductos())
             {
                 Console.WriteLine($"{a.IdProducto} : {a.Cantidad} ");
             }
