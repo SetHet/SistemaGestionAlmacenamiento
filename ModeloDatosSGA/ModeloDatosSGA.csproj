@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DProductoCantidad.cs" />
+    <Compile Include="DTipoProductoCantidad.cs" />
     <Compile Include="MDBodega.cs" />
     <Compile Include="MDEmpleado.cs" />
     <Compile Include="MDEntradaCabecera.cs" />
