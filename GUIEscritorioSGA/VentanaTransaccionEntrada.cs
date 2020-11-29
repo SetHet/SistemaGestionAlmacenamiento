@@ -93,6 +93,7 @@ namespace GUIEscritorioSGA
             foreach (var bodega in ListaBodegas)
             {
                 ListaBodegasString.Add(bodega.Nombre);
+                
             }
 
             ComboBox_Bodega.DataSource = ListaBodegasString;
@@ -250,6 +251,11 @@ namespace GUIEscritorioSGA
                 ListaIDProductoCantidad[index].Cantidad += 10;
                 ActualizarListaProductosCantidad();
             }
+        }
+
+        private void ComboBox_Proveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

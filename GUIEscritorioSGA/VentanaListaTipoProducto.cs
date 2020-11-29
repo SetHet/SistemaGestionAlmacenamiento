@@ -38,5 +38,10 @@ namespace GUIEscritorioSGA
 
             DataGridView_ListaTipoProducto.DataSource = listaTipos;
         }
+
+        private void DataGridView_ListaTipoProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -113,6 +113,34 @@ namespace GUIEscritorioSGA.ServiceEmpleado {
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Login", ReplyAction="*")]
         GUIEscritorioSGA.ServiceEmpleado.LoginResponse Login(GUIEscritorioSGA.ServiceEmpleado.LoginRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Buscar", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceEmpleado.BuscarResponse Buscar(GUIEscritorioSGA.ServiceEmpleado.BuscarRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento BuscarAllResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BuscarAll", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceEmpleado.BuscarAllResponse BuscarAll(GUIEscritorioSGA.ServiceEmpleado.BuscarAllRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Delete", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceEmpleado.DeleteResponse Delete(GUIEscritorioSGA.ServiceEmpleado.DeleteRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertWithValues", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesResponse InsertWithValues(GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nuevoEmpleado del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Insert", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceEmpleado.InsertResponse Insert(GUIEscritorioSGA.ServiceEmpleado.InsertRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento rut del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateWithValues", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesResponse UpdateWithValues(GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento editableEmpleado del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Update", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceEmpleado.UpdateResponse Update(GUIEscritorioSGA.ServiceEmpleado.UpdateRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -187,6 +215,499 @@ namespace GUIEscritorioSGA.ServiceEmpleado {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class BuscarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="Buscar", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.BuscarRequestBody Body;
+        
+        public BuscarRequest() {
+        }
+        
+        public BuscarRequest(GUIEscritorioSGA.ServiceEmpleado.BuscarRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class BuscarRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string rut;
+        
+        public BuscarRequestBody() {
+        }
+        
+        public BuscarRequestBody(string rut) {
+            this.rut = rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class BuscarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="BuscarResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.BuscarResponseBody Body;
+        
+        public BuscarResponse() {
+        }
+        
+        public BuscarResponse(GUIEscritorioSGA.ServiceEmpleado.BuscarResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class BuscarResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.MDEmpleado BuscarResult;
+        
+        public BuscarResponseBody() {
+        }
+        
+        public BuscarResponseBody(GUIEscritorioSGA.ServiceEmpleado.MDEmpleado BuscarResult) {
+            this.BuscarResult = BuscarResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class BuscarAllRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="BuscarAll", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.BuscarAllRequestBody Body;
+        
+        public BuscarAllRequest() {
+        }
+        
+        public BuscarAllRequest(GUIEscritorioSGA.ServiceEmpleado.BuscarAllRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class BuscarAllRequestBody {
+        
+        public BuscarAllRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class BuscarAllResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="BuscarAllResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.BuscarAllResponseBody Body;
+        
+        public BuscarAllResponse() {
+        }
+        
+        public BuscarAllResponse(GUIEscritorioSGA.ServiceEmpleado.BuscarAllResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class BuscarAllResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.MDEmpleado[] BuscarAllResult;
+        
+        public BuscarAllResponseBody() {
+        }
+        
+        public BuscarAllResponseBody(GUIEscritorioSGA.ServiceEmpleado.MDEmpleado[] BuscarAllResult) {
+            this.BuscarAllResult = BuscarAllResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DeleteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="Delete", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.DeleteRequestBody Body;
+        
+        public DeleteRequest() {
+        }
+        
+        public DeleteRequest(GUIEscritorioSGA.ServiceEmpleado.DeleteRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class DeleteRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string rut;
+        
+        public DeleteRequestBody() {
+        }
+        
+        public DeleteRequestBody(string rut) {
+            this.rut = rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DeleteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.DeleteResponseBody Body;
+        
+        public DeleteResponse() {
+        }
+        
+        public DeleteResponse(GUIEscritorioSGA.ServiceEmpleado.DeleteResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class DeleteResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool DeleteResult;
+        
+        public DeleteResponseBody() {
+        }
+        
+        public DeleteResponseBody(bool DeleteResult) {
+            this.DeleteResult = DeleteResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class InsertWithValuesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertWithValues", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesRequestBody Body;
+        
+        public InsertWithValuesRequest() {
+        }
+        
+        public InsertWithValuesRequest(GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class InsertWithValuesRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string rut;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string apellido;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string password;
+        
+        public InsertWithValuesRequestBody() {
+        }
+        
+        public InsertWithValuesRequestBody(string rut, string nombre, string apellido, string password) {
+            this.rut = rut;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.password = password;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class InsertWithValuesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertWithValuesResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesResponseBody Body;
+        
+        public InsertWithValuesResponse() {
+        }
+        
+        public InsertWithValuesResponse(GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class InsertWithValuesResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool InsertWithValuesResult;
+        
+        public InsertWithValuesResponseBody() {
+        }
+        
+        public InsertWithValuesResponseBody(bool InsertWithValuesResult) {
+            this.InsertWithValuesResult = InsertWithValuesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class InsertRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="Insert", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.InsertRequestBody Body;
+        
+        public InsertRequest() {
+        }
+        
+        public InsertRequest(GUIEscritorioSGA.ServiceEmpleado.InsertRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class InsertRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.MDEmpleado nuevoEmpleado;
+        
+        public InsertRequestBody() {
+        }
+        
+        public InsertRequestBody(GUIEscritorioSGA.ServiceEmpleado.MDEmpleado nuevoEmpleado) {
+            this.nuevoEmpleado = nuevoEmpleado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class InsertResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.InsertResponseBody Body;
+        
+        public InsertResponse() {
+        }
+        
+        public InsertResponse(GUIEscritorioSGA.ServiceEmpleado.InsertResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class InsertResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool InsertResult;
+        
+        public InsertResponseBody() {
+        }
+        
+        public InsertResponseBody(bool InsertResult) {
+            this.InsertResult = InsertResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateWithValuesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateWithValues", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesRequestBody Body;
+        
+        public UpdateWithValuesRequest() {
+        }
+        
+        public UpdateWithValuesRequest(GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateWithValuesRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string rut;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string apellido;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string password;
+        
+        public UpdateWithValuesRequestBody() {
+        }
+        
+        public UpdateWithValuesRequestBody(string rut, string nombre, string apellido, string password) {
+            this.rut = rut;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.password = password;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateWithValuesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateWithValuesResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesResponseBody Body;
+        
+        public UpdateWithValuesResponse() {
+        }
+        
+        public UpdateWithValuesResponse(GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateWithValuesResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool UpdateWithValuesResult;
+        
+        public UpdateWithValuesResponseBody() {
+        }
+        
+        public UpdateWithValuesResponseBody(bool UpdateWithValuesResult) {
+            this.UpdateWithValuesResult = UpdateWithValuesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="Update", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.UpdateRequestBody Body;
+        
+        public UpdateRequest() {
+        }
+        
+        public UpdateRequest(GUIEscritorioSGA.ServiceEmpleado.UpdateRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.MDEmpleado editableEmpleado;
+        
+        public UpdateRequestBody() {
+        }
+        
+        public UpdateRequestBody(GUIEscritorioSGA.ServiceEmpleado.MDEmpleado editableEmpleado) {
+            this.editableEmpleado = editableEmpleado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceEmpleado.UpdateResponseBody Body;
+        
+        public UpdateResponse() {
+        }
+        
+        public UpdateResponse(GUIEscritorioSGA.ServiceEmpleado.UpdateResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool UpdateResult;
+        
+        public UpdateResponseBody() {
+        }
+        
+        public UpdateResponseBody(bool UpdateResult) {
+            this.UpdateResult = UpdateResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WebServiceEmpleadoSoapChannel : GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap, System.ServiceModel.IClientChannel {
     }
@@ -226,6 +747,102 @@ namespace GUIEscritorioSGA.ServiceEmpleado {
             inValue.Body.password = password;
             GUIEscritorioSGA.ServiceEmpleado.LoginResponse retVal = ((GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap)(this)).Login(inValue);
             return retVal.Body.LoginResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceEmpleado.BuscarResponse GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap.Buscar(GUIEscritorioSGA.ServiceEmpleado.BuscarRequest request) {
+            return base.Channel.Buscar(request);
+        }
+        
+        public GUIEscritorioSGA.ServiceEmpleado.MDEmpleado Buscar(string rut) {
+            GUIEscritorioSGA.ServiceEmpleado.BuscarRequest inValue = new GUIEscritorioSGA.ServiceEmpleado.BuscarRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceEmpleado.BuscarRequestBody();
+            inValue.Body.rut = rut;
+            GUIEscritorioSGA.ServiceEmpleado.BuscarResponse retVal = ((GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap)(this)).Buscar(inValue);
+            return retVal.Body.BuscarResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceEmpleado.BuscarAllResponse GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap.BuscarAll(GUIEscritorioSGA.ServiceEmpleado.BuscarAllRequest request) {
+            return base.Channel.BuscarAll(request);
+        }
+        
+        public GUIEscritorioSGA.ServiceEmpleado.MDEmpleado[] BuscarAll() {
+            GUIEscritorioSGA.ServiceEmpleado.BuscarAllRequest inValue = new GUIEscritorioSGA.ServiceEmpleado.BuscarAllRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceEmpleado.BuscarAllRequestBody();
+            GUIEscritorioSGA.ServiceEmpleado.BuscarAllResponse retVal = ((GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap)(this)).BuscarAll(inValue);
+            return retVal.Body.BuscarAllResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceEmpleado.DeleteResponse GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap.Delete(GUIEscritorioSGA.ServiceEmpleado.DeleteRequest request) {
+            return base.Channel.Delete(request);
+        }
+        
+        public bool Delete(string rut) {
+            GUIEscritorioSGA.ServiceEmpleado.DeleteRequest inValue = new GUIEscritorioSGA.ServiceEmpleado.DeleteRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceEmpleado.DeleteRequestBody();
+            inValue.Body.rut = rut;
+            GUIEscritorioSGA.ServiceEmpleado.DeleteResponse retVal = ((GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap)(this)).Delete(inValue);
+            return retVal.Body.DeleteResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesResponse GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap.InsertWithValues(GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesRequest request) {
+            return base.Channel.InsertWithValues(request);
+        }
+        
+        public bool InsertWithValues(string rut, string nombre, string apellido, string password) {
+            GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesRequest inValue = new GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesRequestBody();
+            inValue.Body.rut = rut;
+            inValue.Body.nombre = nombre;
+            inValue.Body.apellido = apellido;
+            inValue.Body.password = password;
+            GUIEscritorioSGA.ServiceEmpleado.InsertWithValuesResponse retVal = ((GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap)(this)).InsertWithValues(inValue);
+            return retVal.Body.InsertWithValuesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceEmpleado.InsertResponse GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap.Insert(GUIEscritorioSGA.ServiceEmpleado.InsertRequest request) {
+            return base.Channel.Insert(request);
+        }
+        
+        public bool Insert(GUIEscritorioSGA.ServiceEmpleado.MDEmpleado nuevoEmpleado) {
+            GUIEscritorioSGA.ServiceEmpleado.InsertRequest inValue = new GUIEscritorioSGA.ServiceEmpleado.InsertRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceEmpleado.InsertRequestBody();
+            inValue.Body.nuevoEmpleado = nuevoEmpleado;
+            GUIEscritorioSGA.ServiceEmpleado.InsertResponse retVal = ((GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap)(this)).Insert(inValue);
+            return retVal.Body.InsertResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesResponse GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap.UpdateWithValues(GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesRequest request) {
+            return base.Channel.UpdateWithValues(request);
+        }
+        
+        public bool UpdateWithValues(string rut, string nombre, string apellido, string password) {
+            GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesRequest inValue = new GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesRequestBody();
+            inValue.Body.rut = rut;
+            inValue.Body.nombre = nombre;
+            inValue.Body.apellido = apellido;
+            inValue.Body.password = password;
+            GUIEscritorioSGA.ServiceEmpleado.UpdateWithValuesResponse retVal = ((GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap)(this)).UpdateWithValues(inValue);
+            return retVal.Body.UpdateWithValuesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceEmpleado.UpdateResponse GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap.Update(GUIEscritorioSGA.ServiceEmpleado.UpdateRequest request) {
+            return base.Channel.Update(request);
+        }
+        
+        public bool Update(GUIEscritorioSGA.ServiceEmpleado.MDEmpleado editableEmpleado) {
+            GUIEscritorioSGA.ServiceEmpleado.UpdateRequest inValue = new GUIEscritorioSGA.ServiceEmpleado.UpdateRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceEmpleado.UpdateRequestBody();
+            inValue.Body.editableEmpleado = editableEmpleado;
+            GUIEscritorioSGA.ServiceEmpleado.UpdateResponse retVal = ((GUIEscritorioSGA.ServiceEmpleado.WebServiceEmpleadoSoap)(this)).Update(inValue);
+            return retVal.Body.UpdateResult;
         }
     }
 }

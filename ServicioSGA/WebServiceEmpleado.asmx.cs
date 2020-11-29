@@ -20,11 +20,68 @@ namespace ServicioSGA
     {
 
         [WebMethod]
-        public MDEmpleado Login(string rut,  string password)
+        public MDEmpleado Login(string rut, string password)
         {
             NegocioEmpleado negEmpleado = new NegocioEmpleado();
             MDEmpleado empleado = negEmpleado.Login(rut, password);
             return empleado;
+        }
+    
+
+    [WebMethod]
+        public MDEmpleado Buscar(string rut)
+        {
+            NegocioEmpleado auxEmpleado = new NegocioEmpleado();
+
+            return auxEmpleado.Select(rut);
+        }
+
+        [WebMethod]
+        public List<MDEmpleado> BuscarAll()
+        {
+            NegocioEmpleado auxEmpleado = new NegocioEmpleado();
+
+            return auxEmpleado.Select();
+        }
+
+        [WebMethod]
+        public bool Delete(string rut)
+        {
+            NegocioEmpleado auxEmpleado = new NegocioEmpleado();
+
+            return auxEmpleado.Delete(rut);
+        }
+
+        [WebMethod]
+        public bool InsertWithValues(string rut, string nombre, string apellido, string password)
+        {
+            NegocioEmpleado auxEmpleado = new NegocioEmpleado();
+
+            return auxEmpleado.Insert(rut , nombre, apellido , password);
+        }
+
+        [WebMethod]
+        public bool Insert(MDEmpleado nuevoEmpleado)
+        {
+            NegocioEmpleado auxEmpleado = new NegocioEmpleado();
+
+            return auxEmpleado.Insert(nuevoEmpleado);
+        }
+
+        [WebMethod]
+        public bool UpdateWithValues(string rut, string nombre, string apellido, string password)
+        {
+            NegocioEmpleado auxEmpleado = new NegocioEmpleado();
+
+            return auxEmpleado.Update(rut, nombre, apellido,password);
+        }
+
+        [WebMethod]
+        public bool Update(MDEmpleado editableEmpleado)
+        {
+            NegocioEmpleado auxEmpleado = new NegocioEmpleado();
+
+            return auxEmpleado.Update(editableEmpleado);
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.Txt_NombreProveedor = new System.Windows.Forms.TextBox();
             this.Txt_IdProveedor = new System.Windows.Forms.TextBox();
             this.Txt_Actual = new System.Windows.Forms.TextBox();
             this.Btn_Ultimo = new System.Windows.Forms.Button();
@@ -44,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_DireccionProveedor = new System.Windows.Forms.TextBox();
+            this.Txt_NombreProveedor = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -56,23 +56,15 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre Proveedor";
             // 
-            // Txt_NombreProveedor
-            // 
-            this.Txt_NombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_NombreProveedor.Location = new System.Drawing.Point(401, 106);
-            this.Txt_NombreProveedor.Name = "Txt_NombreProveedor";
-            this.Txt_NombreProveedor.ReadOnly = true;
-            this.Txt_NombreProveedor.Size = new System.Drawing.Size(186, 26);
-            this.Txt_NombreProveedor.TabIndex = 3;
-            // 
             // Txt_IdProveedor
             // 
             this.Txt_IdProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_IdProveedor.Location = new System.Drawing.Point(401, 55);
+            this.Txt_IdProveedor.Location = new System.Drawing.Point(414, 55);
             this.Txt_IdProveedor.Name = "Txt_IdProveedor";
             this.Txt_IdProveedor.ReadOnly = true;
-            this.Txt_IdProveedor.Size = new System.Drawing.Size(186, 26);
+            this.Txt_IdProveedor.Size = new System.Drawing.Size(173, 26);
             this.Txt_IdProveedor.TabIndex = 4;
+            this.Txt_IdProveedor.TextChanged += new System.EventHandler(this.Txt_IdProveedor_TextChanged);
             // 
             // Txt_Actual
             // 
@@ -94,6 +86,7 @@
             this.Btn_Ultimo.TabIndex = 23;
             this.Btn_Ultimo.Text = ">>";
             this.Btn_Ultimo.UseVisualStyleBackColor = true;
+            this.Btn_Ultimo.Click += new System.EventHandler(this.Btn_Ultimo_Click_1);
             // 
             // Btn_Siguiente
             // 
@@ -104,6 +97,7 @@
             this.Btn_Siguiente.TabIndex = 22;
             this.Btn_Siguiente.Text = ">";
             this.Btn_Siguiente.UseVisualStyleBackColor = true;
+            this.Btn_Siguiente.Click += new System.EventHandler(this.Btn_Siguiente_Click_1);
             // 
             // Btn_Anterior
             // 
@@ -114,6 +108,7 @@
             this.Btn_Anterior.TabIndex = 21;
             this.Btn_Anterior.Text = "<";
             this.Btn_Anterior.UseVisualStyleBackColor = true;
+            this.Btn_Anterior.Click += new System.EventHandler(this.Btn_Anterior_Click_1);
             // 
             // Btn_Primero
             // 
@@ -124,6 +119,7 @@
             this.Btn_Primero.TabIndex = 20;
             this.Btn_Primero.Text = "<<";
             this.Btn_Primero.UseVisualStyleBackColor = true;
+            this.Btn_Primero.Click += new System.EventHandler(this.Btn_Primero_Click_1);
             // 
             // Btn_Salir
             // 
@@ -134,6 +130,7 @@
             this.Btn_Salir.TabIndex = 19;
             this.Btn_Salir.Text = "Salir";
             this.Btn_Salir.UseVisualStyleBackColor = true;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click_1);
             // 
             // Btn_Listar
             // 
@@ -144,6 +141,7 @@
             this.Btn_Listar.TabIndex = 18;
             this.Btn_Listar.Text = "Listar";
             this.Btn_Listar.UseVisualStyleBackColor = true;
+            this.Btn_Listar.Click += new System.EventHandler(this.Btn_Listar_Click_1);
             // 
             // Btn_Actualizar
             // 
@@ -154,6 +152,7 @@
             this.Btn_Actualizar.TabIndex = 17;
             this.Btn_Actualizar.Text = "Actualizar";
             this.Btn_Actualizar.UseVisualStyleBackColor = true;
+            this.Btn_Actualizar.Click += new System.EventHandler(this.Btn_Actualizar_Click_1);
             // 
             // Btn_Eliminar
             // 
@@ -164,6 +163,7 @@
             this.Btn_Eliminar.TabIndex = 16;
             this.Btn_Eliminar.Text = "Eliminar";
             this.Btn_Eliminar.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar.Click += new System.EventHandler(this.Btn_Eliminar_Click_1);
             // 
             // Btn_Nuevo
             // 
@@ -198,18 +198,26 @@
             // 
             // txt_DireccionProveedor
             // 
-            this.txt_DireccionProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DireccionProveedor.Location = new System.Drawing.Point(401, 158);
+            this.txt_DireccionProveedor.Location = new System.Drawing.Point(414, 147);
+            this.txt_DireccionProveedor.Multiline = true;
             this.txt_DireccionProveedor.Name = "txt_DireccionProveedor";
-            this.txt_DireccionProveedor.ReadOnly = true;
-            this.txt_DireccionProveedor.Size = new System.Drawing.Size(186, 26);
-            this.txt_DireccionProveedor.TabIndex = 27;
+            this.txt_DireccionProveedor.Size = new System.Drawing.Size(173, 31);
+            this.txt_DireccionProveedor.TabIndex = 29;
+            // 
+            // Txt_NombreProveedor
+            // 
+            this.Txt_NombreProveedor.Location = new System.Drawing.Point(414, 97);
+            this.Txt_NombreProveedor.Multiline = true;
+            this.Txt_NombreProveedor.Name = "Txt_NombreProveedor";
+            this.Txt_NombreProveedor.Size = new System.Drawing.Size(173, 29);
+            this.Txt_NombreProveedor.TabIndex = 30;
             // 
             // VentanaMantenedorProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Txt_NombreProveedor);
             this.Controls.Add(this.txt_DireccionProveedor);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -224,7 +232,6 @@
             this.Controls.Add(this.Btn_Eliminar);
             this.Controls.Add(this.Btn_Nuevo);
             this.Controls.Add(this.Txt_IdProveedor);
-            this.Controls.Add(this.Txt_NombreProveedor);
             this.Controls.Add(this.label2);
             this.Name = "VentanaMantenedorProveedor";
             this.Text = "VentanaMantenedorProveedor";
@@ -235,7 +242,6 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Txt_NombreProveedor;
         private System.Windows.Forms.TextBox Txt_IdProveedor;
         private System.Windows.Forms.TextBox Txt_Actual;
         private System.Windows.Forms.Button Btn_Ultimo;
@@ -250,5 +256,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_DireccionProveedor;
+        private System.Windows.Forms.TextBox Txt_NombreProveedor;
     }
 }
