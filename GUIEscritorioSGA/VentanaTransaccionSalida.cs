@@ -28,7 +28,8 @@ namespace GUIEscritorioSGA
         private List<string> listaBodegasString;
 
         private List<ServiceProducto.MDProducto> listaProductos;
-        //private List<ServiceProducto.DProductoCantidad> listaProductoCantidadMaxima;
+        private List<ServiceProducto.DProductoCantidad> listaProductoCantidadMaxima;
+        private List<StructIDProductoMaxCantidad> listaProductoCantidad;
 
         private List<ServiceSalida.DProductoCantidad> listaProductoCantidadSalida;
         #endregion
@@ -42,6 +43,10 @@ namespace GUIEscritorioSGA
         public List<string> ListaSucursalesString { get => listaSucursalesString; set => listaSucursalesString = value; }
         public List<MDBodega> ListaBodegas { get => listaBodegas; set => listaBodegas = value; }
         public List<string> ListaBodegasString { get => listaBodegasString; set => listaBodegasString = value; }
+        public List<MDProducto> ListaProductos { get => listaProductos; set => listaProductos = value; }
+        public List<ServiceProducto.DProductoCantidad> ListaProductoCantidadMaxima { get => listaProductoCantidadMaxima; set => listaProductoCantidadMaxima = value; }
+        public List<StructIDProductoMaxCantidad> ListaProductoCantidad { get => listaProductoCantidad; set => listaProductoCantidad = value; }
+        public List<ServiceSalida.DProductoCantidad> ListaProductoCantidadSalida { get => listaProductoCantidadSalida; set => listaProductoCantidadSalida = value; }
 
 
 
@@ -52,6 +57,21 @@ namespace GUIEscritorioSGA
             InitializeComponent();
             CargarContenido();
         }
+
+        #region Estructuras
+        public class StructIDProductoMaxCantidad
+        {
+            private int id;
+            private string nombre;
+            private int max;
+            private int cantidad;
+
+            public int Id { get => id; set => id = value; }
+            public string Nombre { get => nombre; set => nombre = value; }
+            public int Max { get => max; set => max = value; }
+            public int Cantidad { get => cantidad; set => cantidad = value; }
+        }
+        #endregion
 
         #region Funciones
 
@@ -152,7 +172,35 @@ namespace GUIEscritorioSGA
 
         private void ComboBox_Bodega_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Cargar los productos
+            ListaProductos = AuxServiceProducto.BuscarAll().ToList();
+            int id_bodega = ListaBodegas[ComboBox_Bodega.SelectedIndex].IdBodega;
+            ListaProductoCantidadMaxima = AuxServiceProducto.GetCantidadProductoDifferenciaByBodega(id_bodega).ToList();
+            ListaProductoCantidad = new List<StructIDProductoMaxCantidad>();
+            StructIDProductoMaxCantidad auxIDProductoMaxCantidad;
+            Dictionary<int, int> diccProductoCantidadMaxima = new Dictionary<int, int>();
+
+            //Pasar los valores maximos al dicc
+            foreach (var productoCantidadMax in ListaProductoCantidadMaxima)
+            {
+                diccProductoCantidadMaxima[productoCantidadMax.IdProducto] = productoCantidadMax.Cantidad;
+            }
+
+            //Crear la lista de productos con stock
+            foreach (var producto in ListaProductos)
+            {
+                if (diccProductoCantidadMaxima.ContainsKey(producto.IdProducto))
+                {
+                    auxIDProductoMaxCantidad = new StructIDProductoMaxCantidad();
+                    auxIDProductoMaxCantidad.Id = producto.IdProducto;
+                    auxIDProductoMaxCantidad.Nombre = producto.Nombre;
+                    auxIDProductoMaxCantidad.Max = diccProductoCantidadMaxima[producto.IdProducto];
+                    auxIDProductoMaxCantidad.Cantidad = 0;
+                    ListaProductoCantidad.Add(auxIDProductoMaxCantidad);
+                }
+            }
+
+            //Asignar al data grid view
+            DataGridView_ProductosCantidad.DataSource = ListaProductoCantidad;
         }
 
         #endregion

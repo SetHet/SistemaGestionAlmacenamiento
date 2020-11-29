@@ -46,7 +46,7 @@ namespace GUIEscritorioSGA
         public List<string> ListaProveedoresString { get => listaProveedoresString; set => listaProveedoresString = value; }
         public List<MDProducto> ListaProductos { get => listaProductos; set => listaProductos = value; }
         private List<DataIDProductoCantidad> ListaIDProductoCantidad { get => listaIDProductoCantidad; set => listaIDProductoCantidad = value; }
-        public List<DProductoCantidad> ListaProductoCantidad { get => listaProductoCantidad; set => listaProductoCantidad = value; }
+        public List<ServiceEntrada.DProductoCantidad> ListaProductoCantidad { get => listaProductoCantidad; set => listaProductoCantidad = value; }
 
         #endregion
 
@@ -172,7 +172,7 @@ namespace GUIEscritorioSGA
 
             foreach (var itemIDProductoCantidad in ListaIDProductoCantidad)
             {
-                auxProductoCantidad = new DProductoCantidad();
+                auxProductoCantidad = new ServiceEntrada.DProductoCantidad();
                 auxProductoCantidad.Cantidad = itemIDProductoCantidad.Cantidad;
                 auxProductoCantidad.IdProducto = itemIDProductoCantidad.Id;
                 ListaProductoCantidad.Add(auxProductoCantidad);

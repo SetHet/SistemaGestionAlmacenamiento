@@ -76,5 +76,53 @@ namespace ServicioSGA
 
             return negocioProducto.Update(editableProducto);
         }
+
+        [WebMethod]
+        public List<DProductoCantidad> GetCantidadProductoDifferencia()
+        {
+            NegocioProducto negocioProducto = new NegocioProducto();
+
+            return negocioProducto.GetCantidadProducto();
+        }
+
+        [WebMethod]
+        public List<DProductoCantidad> GetCantidadProductoDifferenciaByBodega(int id_bodega)
+        {
+            NegocioProducto negocioProducto = new NegocioProducto();
+
+            return negocioProducto.GetCantidadProducto(id_bodega);
+        }
+
+        [WebMethod]
+        public List<DProductoCantidad> GetCantidadProductoEntrada()
+        {
+            NegocioProducto negocioProducto = new NegocioProducto();
+
+            return negocioProducto.GetCantidadProductoEntrada();
+        }
+
+        [WebMethod]
+        public List<DProductoCantidad> GetCantidadProductoEntradaByBodega(int id_bodega)
+        {
+            NegocioProducto negocioProducto = new NegocioProducto();
+
+            return negocioProducto.GetCantidadProductoEntrada(id_bodega);
+        }
+
+        [WebMethod]
+        public List<DProductoCantidad> GetCantidadProductoSalida()
+        {
+            NegocioProducto negocioProducto = new NegocioProducto();
+
+            return negocioProducto.GetCantidadProductoSalida();
+        }
+
+        [WebMethod]
+        public List<DProductoCantidad> GetCantidadProductoSalidaByBodega(int id_bodega)
+        {
+            NegocioProducto negocioProducto = new NegocioProducto();
+
+            return negocioProducto.GetCantidadProductoSalida(id_bodega);
+        }
     }
 }

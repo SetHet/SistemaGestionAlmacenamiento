@@ -109,7 +109,7 @@ namespace NegocioSGA
             return Update( editableProducto.IdProducto, editableProducto.IdTipoProducto, editableProducto.Nombre, editableProducto.Descripcion);
         }
 
-        public List<DProductoCantidad> GetCantidadProductos(int id_bodega)
+        public List<DProductoCantidad> GetCantidadProducto(int id_bodega)
         {
             Dictionary<int, int> diccSalidaProCant = new Dictionary<int, int>();
             List<DProductoCantidad> listaProdCantEntrada = GetCantidadProductoEntrada(id_bodega);
@@ -201,7 +201,7 @@ namespace NegocioSGA
             return listaProductosCantidad;
         }
 
-        public List<DProductoCantidad> GetCantidadProductos()
+        public List<DProductoCantidad> GetCantidadProducto()
         {
             Dictionary<int, int> diccSalidaProCant = new Dictionary<int, int>();
             List<DProductoCantidad> listaProdCantEntrada = GetCantidadProductoEntrada();

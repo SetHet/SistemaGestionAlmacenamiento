@@ -104,6 +104,65 @@ namespace GUIEscritorioSGA.ServiceProducto {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DProductoCantidad", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class DProductoCantidad : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdProductoField;
+        
+        private int CantidadField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int IdProducto {
+            get {
+                return this.IdProductoField;
+            }
+            set {
+                if ((this.IdProductoField.Equals(value) != true)) {
+                    this.IdProductoField = value;
+                    this.RaisePropertyChanged("IdProducto");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+        public int Cantidad {
+            get {
+                return this.CantidadField;
+            }
+            set {
+                if ((this.CantidadField.Equals(value) != true)) {
+                    this.CantidadField = value;
+                    this.RaisePropertyChanged("Cantidad");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceProducto.WebServiceProductoSoap")]
     public interface WebServiceProductoSoap {
@@ -155,6 +214,48 @@ namespace GUIEscritorioSGA.ServiceProducto {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Update", ReplyAction="*")]
         System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.UpdateResponse> UpdateAsync(GUIEscritorioSGA.ServiceProducto.UpdateRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento GetCantidadProductoDifferenciaResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoDifferencia", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaResponse GetCantidadProductoDifferencia(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoDifferencia", ReplyAction="*")]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaResponse> GetCantidadProductoDifferenciaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento GetCantidadProductoDifferenciaByBodegaResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoDifferenciaByBodega", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaResponse GetCantidadProductoDifferenciaByBodega(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoDifferenciaByBodega", ReplyAction="*")]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaResponse> GetCantidadProductoDifferenciaByBodegaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento GetCantidadProductoEntradaResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoEntrada", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaResponse GetCantidadProductoEntrada(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoEntrada", ReplyAction="*")]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaResponse> GetCantidadProductoEntradaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento GetCantidadProductoEntradaByBodegaResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoEntradaByBodega", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaResponse GetCantidadProductoEntradaByBodega(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoEntradaByBodega", ReplyAction="*")]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaResponse> GetCantidadProductoEntradaByBodegaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento GetCantidadProductoSalidaResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoSalida", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaResponse GetCantidadProductoSalida(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoSalida", ReplyAction="*")]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaResponse> GetCantidadProductoSalidaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento GetCantidadProductoSalidaByBodegaResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoSalidaByBodega", ReplyAction="*")]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaResponse GetCantidadProductoSalidaByBodega(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCantidadProductoSalidaByBodega", ReplyAction="*")]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaResponse> GetCantidadProductoSalidaByBodegaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -578,6 +679,393 @@ namespace GUIEscritorioSGA.ServiceProducto {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoDifferenciaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoDifferencia", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequestBody Body;
+        
+        public GetCantidadProductoDifferenciaRequest() {
+        }
+        
+        public GetCantidadProductoDifferenciaRequest(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetCantidadProductoDifferenciaRequestBody {
+        
+        public GetCantidadProductoDifferenciaRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoDifferenciaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoDifferenciaResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaResponseBody Body;
+        
+        public GetCantidadProductoDifferenciaResponse() {
+        }
+        
+        public GetCantidadProductoDifferenciaResponse(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCantidadProductoDifferenciaResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoDifferenciaResult;
+        
+        public GetCantidadProductoDifferenciaResponseBody() {
+        }
+        
+        public GetCantidadProductoDifferenciaResponseBody(GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoDifferenciaResult) {
+            this.GetCantidadProductoDifferenciaResult = GetCantidadProductoDifferenciaResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoDifferenciaByBodegaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoDifferenciaByBodega", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequestBody Body;
+        
+        public GetCantidadProductoDifferenciaByBodegaRequest() {
+        }
+        
+        public GetCantidadProductoDifferenciaByBodegaRequest(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCantidadProductoDifferenciaByBodegaRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id_bodega;
+        
+        public GetCantidadProductoDifferenciaByBodegaRequestBody() {
+        }
+        
+        public GetCantidadProductoDifferenciaByBodegaRequestBody(int id_bodega) {
+            this.id_bodega = id_bodega;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoDifferenciaByBodegaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoDifferenciaByBodegaResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaResponseBody Body;
+        
+        public GetCantidadProductoDifferenciaByBodegaResponse() {
+        }
+        
+        public GetCantidadProductoDifferenciaByBodegaResponse(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCantidadProductoDifferenciaByBodegaResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoDifferenciaByBodegaResult;
+        
+        public GetCantidadProductoDifferenciaByBodegaResponseBody() {
+        }
+        
+        public GetCantidadProductoDifferenciaByBodegaResponseBody(GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoDifferenciaByBodegaResult) {
+            this.GetCantidadProductoDifferenciaByBodegaResult = GetCantidadProductoDifferenciaByBodegaResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoEntradaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoEntrada", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequestBody Body;
+        
+        public GetCantidadProductoEntradaRequest() {
+        }
+        
+        public GetCantidadProductoEntradaRequest(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetCantidadProductoEntradaRequestBody {
+        
+        public GetCantidadProductoEntradaRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoEntradaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoEntradaResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaResponseBody Body;
+        
+        public GetCantidadProductoEntradaResponse() {
+        }
+        
+        public GetCantidadProductoEntradaResponse(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCantidadProductoEntradaResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoEntradaResult;
+        
+        public GetCantidadProductoEntradaResponseBody() {
+        }
+        
+        public GetCantidadProductoEntradaResponseBody(GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoEntradaResult) {
+            this.GetCantidadProductoEntradaResult = GetCantidadProductoEntradaResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoEntradaByBodegaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoEntradaByBodega", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequestBody Body;
+        
+        public GetCantidadProductoEntradaByBodegaRequest() {
+        }
+        
+        public GetCantidadProductoEntradaByBodegaRequest(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCantidadProductoEntradaByBodegaRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id_bodega;
+        
+        public GetCantidadProductoEntradaByBodegaRequestBody() {
+        }
+        
+        public GetCantidadProductoEntradaByBodegaRequestBody(int id_bodega) {
+            this.id_bodega = id_bodega;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoEntradaByBodegaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoEntradaByBodegaResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaResponseBody Body;
+        
+        public GetCantidadProductoEntradaByBodegaResponse() {
+        }
+        
+        public GetCantidadProductoEntradaByBodegaResponse(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCantidadProductoEntradaByBodegaResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoEntradaByBodegaResult;
+        
+        public GetCantidadProductoEntradaByBodegaResponseBody() {
+        }
+        
+        public GetCantidadProductoEntradaByBodegaResponseBody(GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoEntradaByBodegaResult) {
+            this.GetCantidadProductoEntradaByBodegaResult = GetCantidadProductoEntradaByBodegaResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoSalidaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoSalida", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequestBody Body;
+        
+        public GetCantidadProductoSalidaRequest() {
+        }
+        
+        public GetCantidadProductoSalidaRequest(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetCantidadProductoSalidaRequestBody {
+        
+        public GetCantidadProductoSalidaRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoSalidaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoSalidaResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaResponseBody Body;
+        
+        public GetCantidadProductoSalidaResponse() {
+        }
+        
+        public GetCantidadProductoSalidaResponse(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCantidadProductoSalidaResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoSalidaResult;
+        
+        public GetCantidadProductoSalidaResponseBody() {
+        }
+        
+        public GetCantidadProductoSalidaResponseBody(GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoSalidaResult) {
+            this.GetCantidadProductoSalidaResult = GetCantidadProductoSalidaResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoSalidaByBodegaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoSalidaByBodega", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequestBody Body;
+        
+        public GetCantidadProductoSalidaByBodegaRequest() {
+        }
+        
+        public GetCantidadProductoSalidaByBodegaRequest(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCantidadProductoSalidaByBodegaRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id_bodega;
+        
+        public GetCantidadProductoSalidaByBodegaRequestBody() {
+        }
+        
+        public GetCantidadProductoSalidaByBodegaRequestBody(int id_bodega) {
+            this.id_bodega = id_bodega;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCantidadProductoSalidaByBodegaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCantidadProductoSalidaByBodegaResponse", Namespace="http://tempuri.org/", Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaResponseBody Body;
+        
+        public GetCantidadProductoSalidaByBodegaResponse() {
+        }
+        
+        public GetCantidadProductoSalidaByBodegaResponse(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCantidadProductoSalidaByBodegaResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoSalidaByBodegaResult;
+        
+        public GetCantidadProductoSalidaByBodegaResponseBody() {
+        }
+        
+        public GetCantidadProductoSalidaByBodegaResponseBody(GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoSalidaByBodegaResult) {
+            this.GetCantidadProductoSalidaByBodegaResult = GetCantidadProductoSalidaByBodegaResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WebServiceProductoSoapChannel : GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap, System.ServiceModel.IClientChannel {
     }
@@ -769,6 +1257,150 @@ namespace GUIEscritorioSGA.ServiceProducto {
             inValue.Body = new GUIEscritorioSGA.ServiceProducto.UpdateRequestBody();
             inValue.Body.editableProducto = editableProducto;
             return ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).UpdateAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaResponse GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoDifferencia(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequest request) {
+            return base.Channel.GetCantidadProductoDifferencia(request);
+        }
+        
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoDifferencia() {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequestBody();
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaResponse retVal = ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoDifferencia(inValue);
+            return retVal.Body.GetCantidadProductoDifferenciaResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaResponse> GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoDifferenciaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequest request) {
+            return base.Channel.GetCantidadProductoDifferenciaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaResponse> GetCantidadProductoDifferenciaAsync() {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaRequestBody();
+            return ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoDifferenciaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaResponse GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoDifferenciaByBodega(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequest request) {
+            return base.Channel.GetCantidadProductoDifferenciaByBodega(request);
+        }
+        
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoDifferenciaByBodega(int id_bodega) {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequestBody();
+            inValue.Body.id_bodega = id_bodega;
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaResponse retVal = ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoDifferenciaByBodega(inValue);
+            return retVal.Body.GetCantidadProductoDifferenciaByBodegaResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaResponse> GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoDifferenciaByBodegaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequest request) {
+            return base.Channel.GetCantidadProductoDifferenciaByBodegaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaResponse> GetCantidadProductoDifferenciaByBodegaAsync(int id_bodega) {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaRequestBody();
+            inValue.Body.id_bodega = id_bodega;
+            return ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoDifferenciaByBodegaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaResponse GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoEntrada(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequest request) {
+            return base.Channel.GetCantidadProductoEntrada(request);
+        }
+        
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoEntrada() {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequestBody();
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaResponse retVal = ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoEntrada(inValue);
+            return retVal.Body.GetCantidadProductoEntradaResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaResponse> GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoEntradaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequest request) {
+            return base.Channel.GetCantidadProductoEntradaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaResponse> GetCantidadProductoEntradaAsync() {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaRequestBody();
+            return ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoEntradaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaResponse GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoEntradaByBodega(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequest request) {
+            return base.Channel.GetCantidadProductoEntradaByBodega(request);
+        }
+        
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoEntradaByBodega(int id_bodega) {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequestBody();
+            inValue.Body.id_bodega = id_bodega;
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaResponse retVal = ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoEntradaByBodega(inValue);
+            return retVal.Body.GetCantidadProductoEntradaByBodegaResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaResponse> GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoEntradaByBodegaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequest request) {
+            return base.Channel.GetCantidadProductoEntradaByBodegaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaResponse> GetCantidadProductoEntradaByBodegaAsync(int id_bodega) {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaRequestBody();
+            inValue.Body.id_bodega = id_bodega;
+            return ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoEntradaByBodegaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaResponse GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoSalida(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequest request) {
+            return base.Channel.GetCantidadProductoSalida(request);
+        }
+        
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoSalida() {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequestBody();
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaResponse retVal = ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoSalida(inValue);
+            return retVal.Body.GetCantidadProductoSalidaResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaResponse> GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoSalidaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequest request) {
+            return base.Channel.GetCantidadProductoSalidaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaResponse> GetCantidadProductoSalidaAsync() {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaRequestBody();
+            return ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoSalidaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaResponse GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoSalidaByBodega(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequest request) {
+            return base.Channel.GetCantidadProductoSalidaByBodega(request);
+        }
+        
+        public GUIEscritorioSGA.ServiceProducto.DProductoCantidad[] GetCantidadProductoSalidaByBodega(int id_bodega) {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequestBody();
+            inValue.Body.id_bodega = id_bodega;
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaResponse retVal = ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoSalidaByBodega(inValue);
+            return retVal.Body.GetCantidadProductoSalidaByBodegaResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaResponse> GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap.GetCantidadProductoSalidaByBodegaAsync(GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequest request) {
+            return base.Channel.GetCantidadProductoSalidaByBodegaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaResponse> GetCantidadProductoSalidaByBodegaAsync(int id_bodega) {
+            GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequest inValue = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequest();
+            inValue.Body = new GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaRequestBody();
+            inValue.Body.id_bodega = id_bodega;
+            return ((GUIEscritorioSGA.ServiceProducto.WebServiceProductoSoap)(this)).GetCantidadProductoSalidaByBodegaAsync(inValue);
         }
     }
 }

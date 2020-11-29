@@ -283,6 +283,27 @@
     <None Include="Connected Services\ServiceProducto\GUIEscritorioSGA.ServiceProducto.BuscarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceProducto\GUIEscritorioSGA.ServiceProducto.DProductoCantidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceProducto\GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaByBodegaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceProducto\GUIEscritorioSGA.ServiceProducto.GetCantidadProductoDifferenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceProducto\GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaByBodegaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceProducto\GUIEscritorioSGA.ServiceProducto.GetCantidadProductoEntradaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceProducto\GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaByBodegaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceProducto\GUIEscritorioSGA.ServiceProducto.GetCantidadProductoSalidaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceProducto\GUIEscritorioSGA.ServiceProducto.InsertResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

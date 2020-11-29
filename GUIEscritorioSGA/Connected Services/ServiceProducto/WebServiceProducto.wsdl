@@ -114,6 +114,89 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetCantidadProductoDifferencia">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCantidadProductoDifferenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCantidadProductoDifferenciaResult" type="tns:ArrayOfDProductoCantidad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDProductoCantidad">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DProductoCantidad" nillable="true" type="tns:DProductoCantidad" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DProductoCantidad">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdProducto" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCantidadProductoDifferenciaByBodega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_bodega" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCantidadProductoDifferenciaByBodegaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCantidadProductoDifferenciaByBodegaResult" type="tns:ArrayOfDProductoCantidad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCantidadProductoEntrada">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCantidadProductoEntradaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCantidadProductoEntradaResult" type="tns:ArrayOfDProductoCantidad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCantidadProductoEntradaByBodega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_bodega" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCantidadProductoEntradaByBodegaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCantidadProductoEntradaByBodegaResult" type="tns:ArrayOfDProductoCantidad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCantidadProductoSalida">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCantidadProductoSalidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCantidadProductoSalidaResult" type="tns:ArrayOfDProductoCantidad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCantidadProductoSalidaByBodega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_bodega" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCantidadProductoSalidaByBodegaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCantidadProductoSalidaByBodegaResult" type="tns:ArrayOfDProductoCantidad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="BuscarSoapIn">
@@ -158,6 +241,42 @@
   <wsdl:message name="UpdateSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateResponse" />
   </wsdl:message>
+  <wsdl:message name="GetCantidadProductoDifferenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoDifferencia" />
+  </wsdl:message>
+  <wsdl:message name="GetCantidadProductoDifferenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoDifferenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCantidadProductoDifferenciaByBodegaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoDifferenciaByBodega" />
+  </wsdl:message>
+  <wsdl:message name="GetCantidadProductoDifferenciaByBodegaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoDifferenciaByBodegaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCantidadProductoEntradaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoEntrada" />
+  </wsdl:message>
+  <wsdl:message name="GetCantidadProductoEntradaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCantidadProductoEntradaByBodegaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoEntradaByBodega" />
+  </wsdl:message>
+  <wsdl:message name="GetCantidadProductoEntradaByBodegaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoEntradaByBodegaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCantidadProductoSalidaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoSalida" />
+  </wsdl:message>
+  <wsdl:message name="GetCantidadProductoSalidaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoSalidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCantidadProductoSalidaByBodegaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoSalidaByBodega" />
+  </wsdl:message>
+  <wsdl:message name="GetCantidadProductoSalidaByBodegaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCantidadProductoSalidaByBodegaResponse" />
+  </wsdl:message>
   <wsdl:portType name="WebServiceProductoSoap">
     <wsdl:operation name="Buscar">
       <wsdl:input message="tns:BuscarSoapIn" />
@@ -186,6 +305,30 @@
     <wsdl:operation name="Update">
       <wsdl:input message="tns:UpdateSoapIn" />
       <wsdl:output message="tns:UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoDifferencia">
+      <wsdl:input message="tns:GetCantidadProductoDifferenciaSoapIn" />
+      <wsdl:output message="tns:GetCantidadProductoDifferenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoDifferenciaByBodega">
+      <wsdl:input message="tns:GetCantidadProductoDifferenciaByBodegaSoapIn" />
+      <wsdl:output message="tns:GetCantidadProductoDifferenciaByBodegaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoEntrada">
+      <wsdl:input message="tns:GetCantidadProductoEntradaSoapIn" />
+      <wsdl:output message="tns:GetCantidadProductoEntradaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoEntradaByBodega">
+      <wsdl:input message="tns:GetCantidadProductoEntradaByBodegaSoapIn" />
+      <wsdl:output message="tns:GetCantidadProductoEntradaByBodegaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoSalida">
+      <wsdl:input message="tns:GetCantidadProductoSalidaSoapIn" />
+      <wsdl:output message="tns:GetCantidadProductoSalidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoSalidaByBodega">
+      <wsdl:input message="tns:GetCantidadProductoSalidaByBodegaSoapIn" />
+      <wsdl:output message="tns:GetCantidadProductoSalidaByBodegaSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebServiceProductoSoap" type="tns:WebServiceProductoSoap">
@@ -253,6 +396,60 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoDifferencia">
+      <soap:operation soapAction="http://tempuri.org/GetCantidadProductoDifferencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoDifferenciaByBodega">
+      <soap:operation soapAction="http://tempuri.org/GetCantidadProductoDifferenciaByBodega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoEntrada">
+      <soap:operation soapAction="http://tempuri.org/GetCantidadProductoEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoEntradaByBodega">
+      <soap:operation soapAction="http://tempuri.org/GetCantidadProductoEntradaByBodega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoSalida">
+      <soap:operation soapAction="http://tempuri.org/GetCantidadProductoSalida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoSalidaByBodega">
+      <soap:operation soapAction="http://tempuri.org/GetCantidadProductoSalidaByBodega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebServiceProductoSoap12" type="tns:WebServiceProductoSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -312,6 +509,60 @@
     </wsdl:operation>
     <wsdl:operation name="Update">
       <soap12:operation soapAction="http://tempuri.org/Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoDifferencia">
+      <soap12:operation soapAction="http://tempuri.org/GetCantidadProductoDifferencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoDifferenciaByBodega">
+      <soap12:operation soapAction="http://tempuri.org/GetCantidadProductoDifferenciaByBodega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoEntrada">
+      <soap12:operation soapAction="http://tempuri.org/GetCantidadProductoEntrada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoEntradaByBodega">
+      <soap12:operation soapAction="http://tempuri.org/GetCantidadProductoEntradaByBodega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoSalida">
+      <soap12:operation soapAction="http://tempuri.org/GetCantidadProductoSalida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCantidadProductoSalidaByBodega">
+      <soap12:operation soapAction="http://tempuri.org/GetCantidadProductoSalidaByBodega" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
