@@ -108,5 +108,97 @@ namespace NegocioSGA
         {
             return Update( editableProducto.IdProducto, editableProducto.IdTipoProducto, editableProducto.Nombre, editableProducto.Descripcion);
         }
+
+        public List<DProductoCantidad> GetCantidadProductos(int id_bodega)
+        {
+            Dictionary<int, int> diccSalidaProCant = new Dictionary<int, int>();
+            List<DProductoCantidad> listaProdCantEntrada = GetCantidadProductoEntrada(id_bodega);
+            List<DProductoCantidad> listaProdCantSalida = GetCantidadProductoSalida(id_bodega);
+            List<DProductoCantidad> listaProdCantDiferencia = new List<DProductoCantidad>();
+            DProductoCantidad auxProductoCantidad;
+
+            foreach (var salidaProdCant in listaProdCantSalida)
+            {
+                diccSalidaProCant[salidaProdCant.IdProducto] = salidaProdCant.Cantidad;
+            }
+
+            foreach (var entradaProdCant in listaProdCantEntrada)
+            {
+                auxProductoCantidad = new DProductoCantidad();
+                auxProductoCantidad.IdProducto = entradaProdCant.IdProducto;
+                if (diccSalidaProCant.ContainsKey(entradaProdCant.IdProducto))
+                {
+                    auxProductoCantidad.Cantidad = entradaProdCant.Cantidad - diccSalidaProCant[entradaProdCant.IdProducto];
+                }
+                else
+                {
+                    auxProductoCantidad.Cantidad = entradaProdCant.Cantidad;
+                }
+                listaProdCantDiferencia.Add(auxProductoCantidad);
+            }
+
+
+            return listaProdCantDiferencia;
+        }
+
+        public List<DProductoCantidad> GetCantidadProductoEntrada(int id_bodega)
+        {
+            string query = $"SELECT entDet.id_producto as id_producto, SUM(cantidad) as cantidad " +
+                $"FROM Bodega bod " +
+                $"JOIN EntradaCabecera entCab " +
+                $"ON(entCab.id_bodega = bod.id_bodega) " +
+                $"JOIN EntradaDetalle entDet " +
+                $"ON(entCab.cod_entrada = entDet.cod_entrada) " +
+                $"WHERE bod.id_bodega = {id_bodega} " +
+                $"GROUP BY entDet.id_producto";
+
+            DataTable table = Conexion.Select(query);
+
+            List<DProductoCantidad> listaProductosCantidad = new List<DProductoCantidad>();
+            DProductoCantidad auxProductoCantidad;
+
+            if (table != null)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    auxProductoCantidad = new DProductoCantidad();
+                    auxProductoCantidad.IdProducto = Convert.ToInt32(row["id_producto"]);
+                    auxProductoCantidad.Cantidad = Convert.ToInt32(row["cantidad"]);
+                    listaProductosCantidad.Add(auxProductoCantidad);
+                }
+            }
+
+            return listaProductosCantidad;
+        }
+
+        public List<DProductoCantidad> GetCantidadProductoSalida(int id_bodega)
+        {
+            string query = $"SELECT salDet.id_producto as id_producto, SUM(cantidad) as cantidad " +
+                $"FROM Bodega bod " +
+                $"JOIN SalidaCabecera salCab " +
+                $"ON(salCab.id_bodega = bod.id_bodega) " +
+                $"JOIN SalidaDetalle salDet " +
+                $"ON(salCab.cod_salida = salDet.cod_salida) " +
+                $"WHERE bod.id_bodega = {id_bodega} " +
+                $"GROUP BY salDet.id_producto";
+
+            DataTable table = Conexion.Select(query);
+
+            List<DProductoCantidad> listaProductosCantidad = new List<DProductoCantidad>();
+            DProductoCantidad auxProductoCantidad;
+
+            if (table != null)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    auxProductoCantidad = new DProductoCantidad();
+                    auxProductoCantidad.IdProducto = Convert.ToInt32(row["id_producto"]);
+                    auxProductoCantidad.Cantidad = Convert.ToInt32(row["cantidad"]);
+                    listaProductosCantidad.Add(auxProductoCantidad);
+                }
+            }
+
+            return listaProductosCantidad;
+        }
     }
 }
