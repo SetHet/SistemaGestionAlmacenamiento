@@ -45,6 +45,7 @@ namespace GUIEscritorioSGA
             Btn_Primero.Enabled = false;
             Btn_Siguiente.Enabled = false;
             Btn_Ultimo.Enabled = false;
+            Txt_RutEmpleado.Enabled = true;
         }
 
         private void TerminarGuardado()
@@ -60,6 +61,7 @@ namespace GUIEscritorioSGA
             Btn_Primero.Enabled = true;
             Btn_Siguiente.Enabled = true;
             Btn_Ultimo.Enabled = true;
+            Txt_RutEmpleado.Enabled = false;
         }
 
         private void ActualizarLista()
@@ -126,7 +128,7 @@ namespace GUIEscritorioSGA
                 }
                 if (Txt_ApellidoEmpleado.Text.Equals(string.Empty))
                 {
-                    MessageBox.Show("Ingresar una direccion de Empleado Correcto", "Sistema");
+                    MessageBox.Show("Ingresar un apellido de Empleado Correcto", "Sistema");
                     return;
                 }
                 if (Txt_Contraseña.Text.Equals(string.Empty))
