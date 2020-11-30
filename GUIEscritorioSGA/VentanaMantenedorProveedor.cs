@@ -126,9 +126,16 @@ namespace GUIEscritorioSGA
                 }
 
 
-                auxServiceProveedor.InsertWithValues(Txt_NombreProveedor.Text, txt_DireccionProveedor.Text);
-                TerminarGuardado();
-                MessageBox.Show("Elementos guardados correctamente", "Sistema");
+                bool respuestaGuardado = auxServiceProveedor.InsertWithValues(Txt_NombreProveedor.Text, txt_DireccionProveedor.Text);
+                if (respuestaGuardado)
+                {
+                    TerminarGuardado();
+                    MessageBox.Show("Nuevo proveedor guardado.", "Sistema");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar el nuevo proveedor.", "Sistema");
+                }
             }
             else
             {
@@ -203,13 +210,13 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceProveedor.Delete(int.Parse(Txt_IdProveedor.Text));
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede eliminar el elemento.", "Sistema");
+                    MessageBox.Show("No se puede eliminar el proveedor.", "Sistema");
                 }
                 else
                 {
                    
                     ActualizarLista();
-                    MessageBox.Show("Elementos eliminados correctamente","Sistema");
+                    MessageBox.Show("Proveedor eliminado","Sistema");
                 }
             }
             else
@@ -241,12 +248,12 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceProveedor.UpdateWithValues(int.Parse(Txt_IdProveedor.Text), Txt_NombreProveedor.Text, txt_DireccionProveedor.Text);
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede actualizar el elemento.", "Sistema");
+                    MessageBox.Show("No se puede actualizar el proveedor.", "Sistema");
                 }
                 else
                 {
                     ActualizarLista();
-                    MessageBox.Show("Elementos actualizados correctamente", "Sistema");
+                    MessageBox.Show("Proveedor actualizado", "Sistema");
                 }
             }
             else
