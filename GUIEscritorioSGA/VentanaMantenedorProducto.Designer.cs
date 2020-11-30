@@ -216,6 +216,7 @@
             // 
             this.Txt_NombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_NombreProducto.Location = new System.Drawing.Point(386, 135);
+            this.Txt_NombreProducto.MaxLength = 50;
             this.Txt_NombreProducto.Multiline = true;
             this.Txt_NombreProducto.Name = "Txt_NombreProducto";
             this.Txt_NombreProducto.Size = new System.Drawing.Size(186, 26);
@@ -225,6 +226,7 @@
             // 
             this.Txt_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Descripcion.Location = new System.Drawing.Point(386, 178);
+            this.Txt_Descripcion.MaxLength = 500;
             this.Txt_Descripcion.Multiline = true;
             this.Txt_Descripcion.Name = "Txt_Descripcion";
             this.Txt_Descripcion.Size = new System.Drawing.Size(186, 26);

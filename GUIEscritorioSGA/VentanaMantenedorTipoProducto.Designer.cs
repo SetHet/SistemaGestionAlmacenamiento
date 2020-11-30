@@ -78,6 +78,7 @@
             // 
             this.Txt_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Nombre.Location = new System.Drawing.Point(189, 108);
+            this.Txt_Nombre.MaxLength = 50;
             this.Txt_Nombre.Name = "Txt_Nombre";
             this.Txt_Nombre.Size = new System.Drawing.Size(186, 26);
             this.Txt_Nombre.TabIndex = 3;

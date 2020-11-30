@@ -71,6 +71,7 @@
             // 
             this.Txt_Rut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Rut.Location = new System.Drawing.Point(341, 163);
+            this.Txt_Rut.MaxLength = 15;
             this.Txt_Rut.Name = "Txt_Rut";
             this.Txt_Rut.Size = new System.Drawing.Size(226, 30);
             this.Txt_Rut.TabIndex = 3;
@@ -81,6 +82,7 @@
             // 
             this.Txt_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Pass.Location = new System.Drawing.Point(341, 211);
+            this.Txt_Pass.MaxLength = 50;
             this.Txt_Pass.Name = "Txt_Pass";
             this.Txt_Pass.PasswordChar = '*';
             this.Txt_Pass.Size = new System.Drawing.Size(226, 30);

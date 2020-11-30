@@ -202,6 +202,7 @@
             // 
             this.Txt_ApellidoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_ApellidoEmpleado.Location = new System.Drawing.Point(355, 135);
+            this.Txt_ApellidoEmpleado.MaxLength = 50;
             this.Txt_ApellidoEmpleado.Multiline = true;
             this.Txt_ApellidoEmpleado.Name = "Txt_ApellidoEmpleado";
             this.Txt_ApellidoEmpleado.Size = new System.Drawing.Size(186, 25);
@@ -211,6 +212,7 @@
             // 
             this.Txt_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Contraseña.Location = new System.Drawing.Point(355, 177);
+            this.Txt_Contraseña.MaxLength = 50;
             this.Txt_Contraseña.Multiline = true;
             this.Txt_Contraseña.Name = "Txt_Contraseña";
             this.Txt_Contraseña.Size = new System.Drawing.Size(186, 25);
@@ -220,6 +222,7 @@
             // 
             this.Txt_RutEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_RutEmpleado.Location = new System.Drawing.Point(355, 54);
+            this.Txt_RutEmpleado.MaxLength = 15;
             this.Txt_RutEmpleado.Multiline = true;
             this.Txt_RutEmpleado.Name = "Txt_RutEmpleado";
             this.Txt_RutEmpleado.Size = new System.Drawing.Size(186, 23);
@@ -229,6 +232,7 @@
             // 
             this.Txt_NombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_NombreEmpleado.Location = new System.Drawing.Point(355, 92);
+            this.Txt_NombreEmpleado.MaxLength = 50;
             this.Txt_NombreEmpleado.Multiline = true;
             this.Txt_NombreEmpleado.Name = "Txt_NombreEmpleado";
             this.Txt_NombreEmpleado.Size = new System.Drawing.Size(186, 25);
