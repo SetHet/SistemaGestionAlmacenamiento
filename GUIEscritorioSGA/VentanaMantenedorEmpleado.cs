@@ -137,9 +137,16 @@ namespace GUIEscritorioSGA
                     return;
                 }
 
-                auxServiceEmpleado.InsertWithValues(Txt_RutEmpleado.Text, Txt_NombreEmpleado.Text, Txt_ApellidoEmpleado.Text,Txt_Contraseña.Text);
-                TerminarGuardado();
-                MessageBox.Show("Elementos guardados correctamente", "Sistema");
+                bool resultadoGuardar = auxServiceEmpleado.InsertWithValues(Txt_RutEmpleado.Text, Txt_NombreEmpleado.Text, Txt_ApellidoEmpleado.Text,Txt_Contraseña.Text);
+                if (resultadoGuardar)
+                {
+                    TerminarGuardado();
+                    MessageBox.Show("Nuevo empleado guardado", "Sistema");
+                }
+                else
+                {
+                    MessageBox.Show("El nuevo empleado no se pudo guardar", "Sistema");
+                }
             }
             else
             {
@@ -155,13 +162,13 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceEmpleado.Delete(Txt_RutEmpleado.Text);
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede eliminar el elemento.", "Sistema");
+                    MessageBox.Show("No se puede eliminar el empleado.", "Sistema");
                 }
                 else
                 {
 
                     ActualizarLista();
-                    MessageBox.Show("Elemento eliminado correctamente", "Sistema");
+                    MessageBox.Show("Empleado eliminado.", "Sistema");
                 }
             }
             else
@@ -197,12 +204,12 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceEmpleado.UpdateWithValues (Txt_RutEmpleado.Text, Txt_NombreEmpleado.Text, Txt_ApellidoEmpleado.Text,Txt_Contraseña.Text);
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede actualizar el elemento.", "Sistema");
+                    MessageBox.Show("No se pudo actualizar el empleado.", "Sistema");
                 }
                 else
                 {
                     ActualizarLista();
-                    MessageBox.Show("Elementos actualizados correctamente", "Sistema");
+                    MessageBox.Show("Empleado actualizado.", "Sistema");
                     
                 }
             }
