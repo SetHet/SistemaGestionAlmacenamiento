@@ -255,7 +255,7 @@
             this.Controls.Add(this.Btn_Nuevo);
             this.Controls.Add(this.label2);
             this.Name = "VentanaMantenedorEmpleado";
-            this.Text = "VentanaMantenedorEmpleado";
+            this.Text = "SGA Persia Mantenedor de Empleados";
             this.ResumeLayout(false);
             this.PerformLayout();
 

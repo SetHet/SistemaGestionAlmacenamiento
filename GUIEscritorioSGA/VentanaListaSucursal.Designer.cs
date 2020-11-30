@@ -76,7 +76,7 @@
             this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.DataGridView_ListaSucursal);
             this.Name = "VentanaListaSucursal";
-            this.Text = "VentanaListaSucursal";
+            this.Text = "SGA Persia Lista de Sucursales";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ListaSucursal)).EndInit();
             this.ResumeLayout(false);
 

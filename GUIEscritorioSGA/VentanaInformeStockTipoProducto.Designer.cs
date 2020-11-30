@@ -97,7 +97,7 @@
             this.Controls.Add(this.Btn_Actualizar);
             this.Controls.Add(this.Btn_Salir);
             this.Name = "VentanaInformeStockTipoProducto";
-            this.Text = "VentanaInformeStockTipoProducto";
+            this.Text = "SGA Persia Informe Top Stock de Tipos de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ListaTipoProductos)).EndInit();
             this.ResumeLayout(false);
 

@@ -76,7 +76,7 @@
             this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.DataGridView_ListaEmpleado);
             this.Name = "VentanaListaEmpleado";
-            this.Text = "VentanaListaEmpleado";
+            this.Text = "SGA Persia Lista de Empleados";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ListaEmpleado)).EndInit();
             this.ResumeLayout(false);
 

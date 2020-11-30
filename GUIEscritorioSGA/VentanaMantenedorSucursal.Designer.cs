@@ -235,7 +235,7 @@
             this.Controls.Add(this.Btn_Eliminar);
             this.Controls.Add(this.Btn_Nuevo);
             this.Name = "VentanaMantenedorSucursal";
-            this.Text = "VentanaMantenedorSucursal";
+            this.Text = "SGA Persia Mantenedor de Sucursales";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -214,7 +214,7 @@
             this.Controls.Add(this.Btn_Cant_0);
             this.Controls.Add(this.DataGridView_ProductosCantidad);
             this.Name = "VentanaTransaccionEntrada";
-            this.Text = "SGA Persia Entrada Productos";
+            this.Text = "SGA Persia Transaccion Entrada de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ProductosCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -76,7 +76,7 @@
             this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.DataGridView_ListaProducto);
             this.Name = "VentanaListaProducto";
-            this.Text = "VentanaListaProducto";
+            this.Text = "SGA Persia Lista de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ListaProducto)).EndInit();
             this.ResumeLayout(false);
 

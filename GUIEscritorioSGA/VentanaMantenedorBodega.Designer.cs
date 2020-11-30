@@ -235,7 +235,7 @@
             this.Controls.Add(this.Txt_IdBodega);
             this.Controls.Add(this.label2);
             this.Name = "VentanaMantenedorBodega";
-            this.Text = "VentanaMantenedorBodega";
+            this.Text = "SGA Persia Mantenedor de Bodegas";
             this.ResumeLayout(false);
             this.PerformLayout();
 

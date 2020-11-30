@@ -43,11 +43,11 @@
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salidaDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockTipoProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aplicacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Txt_Saludo = new System.Windows.Forms.Label();
-            this.stockTipoProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStripPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,6 +174,13 @@
             this.salidaDeProductosToolStripMenuItem.Text = "Salida de Productos";
             this.salidaDeProductosToolStripMenuItem.Click += new System.EventHandler(this.salidaDeProductosToolStripMenuItem_Click);
             // 
+            // stockTipoProductoToolStripMenuItem
+            // 
+            this.stockTipoProductoToolStripMenuItem.Name = "stockTipoProductoToolStripMenuItem";
+            this.stockTipoProductoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.stockTipoProductoToolStripMenuItem.Text = "Stock Tipo Producto";
+            this.stockTipoProductoToolStripMenuItem.Click += new System.EventHandler(this.stockTipoProductoToolStripMenuItem_Click);
+            // 
             // aplicacionToolStripMenuItem
             // 
             this.aplicacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -208,13 +215,6 @@
             this.Txt_Saludo.Text = "Bienvenido";
             this.Txt_Saludo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // stockTipoProductoToolStripMenuItem
-            // 
-            this.stockTipoProductoToolStripMenuItem.Name = "stockTipoProductoToolStripMenuItem";
-            this.stockTipoProductoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.stockTipoProductoToolStripMenuItem.Text = "Stock Tipo Producto";
-            this.stockTipoProductoToolStripMenuItem.Click += new System.EventHandler(this.stockTipoProductoToolStripMenuItem_Click);
-            // 
             // VentanaMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,7 +224,7 @@
             this.Controls.Add(this.MenuStripPrincipal);
             this.MainMenuStrip = this.MenuStripPrincipal;
             this.Name = "VentanaMenuPrincipal";
-            this.Text = "VentanaMenuPrincipal";
+            this.Text = "SGA Persia Menu Principal";
             this.MenuStripPrincipal.ResumeLayout(false);
             this.MenuStripPrincipal.PerformLayout();
             this.ResumeLayout(false);

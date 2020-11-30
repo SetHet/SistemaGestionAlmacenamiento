@@ -77,7 +77,7 @@
             this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.DataGridView_ListaProveedor);
             this.Name = "VentanaListaProveedor";
-            this.Text = "VentanaListaProveedor";
+            this.Text = "SGA Persia Lista de Proveedores";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ListaProveedor)).EndInit();
             this.ResumeLayout(false);
 

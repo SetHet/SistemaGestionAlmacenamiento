@@ -227,7 +227,7 @@
             this.Controls.Add(this.Btn_Cancelar);
             this.Controls.Add(this.Btn_Completar);
             this.Name = "VentanaTransaccionSalida";
-            this.Text = "VentanaTransaccionSalida";
+            this.Text = "SGA Persia Transaccion Salida de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ProductosCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

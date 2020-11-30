@@ -122,7 +122,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "VentanaLogin";
-            this.Text = "Login SGA Persia";
+            this.Text = "SGA Persia Login";
             this.Load += new System.EventHandler(this.VentanaLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -77,7 +77,7 @@
             this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.DataGridView_ListaBodega);
             this.Name = "VentanaListaBodega";
-            this.Text = "VentanaListaBodega";
+            this.Text = "SGA Persia Lista de Bodegas";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ListaBodega)).EndInit();
             this.ResumeLayout(false);
 

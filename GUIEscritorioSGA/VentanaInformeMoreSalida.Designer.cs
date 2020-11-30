@@ -97,7 +97,7 @@
             this.Controls.Add(this.Btn_Actualizar);
             this.Controls.Add(this.Btn_Salir);
             this.Name = "VentanaInformeMoreSalida";
-            this.Text = "VentanaInformeMoreSalida";
+            this.Text = "SGA Persia Informe Top Salida de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ListaProductos)).EndInit();
             this.ResumeLayout(false);
 

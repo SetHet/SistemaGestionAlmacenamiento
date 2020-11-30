@@ -47,11 +47,11 @@
             this.Txt_NombreProducto = new System.Windows.Forms.TextBox();
             this.Txt_Descripcion = new System.Windows.Forms.TextBox();
             this.Cm_IDTipo = new System.Windows.Forms.ComboBox();
+            this.buscarResponseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Txt_IdTipoProducto = new System.Windows.Forms.TextBox();
             this.buscarAllResponseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buscarResponseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.buscarAllResponseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buscarResponseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buscarAllResponseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Txt_Actual
@@ -241,6 +241,10 @@
             this.Cm_IDTipo.TabIndex = 33;
             this.Cm_IDTipo.SelectedIndexChanged += new System.EventHandler(this.Cmb_SelectedIndexChanged);
             // 
+            // buscarResponseBindingSource
+            // 
+            this.buscarResponseBindingSource.DataSource = typeof(GUIEscritorioSGA.ServiceTipoProducto.BuscarResponse);
+            // 
             // Txt_IdTipoProducto
             // 
             this.Txt_IdTipoProducto.Location = new System.Drawing.Point(20, 104);
@@ -251,10 +255,6 @@
             // buscarAllResponseBindingSource
             // 
             this.buscarAllResponseBindingSource.DataSource = typeof(GUIEscritorioSGA.ServiceTipoProducto.BuscarAllResponse);
-            // 
-            // buscarResponseBindingSource
-            // 
-            this.buscarResponseBindingSource.DataSource = typeof(GUIEscritorioSGA.ServiceTipoProducto.BuscarResponse);
             // 
             // VentanaMantenedorProducto
             // 
@@ -281,9 +281,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "VentanaMantenedorProducto";
-            this.Text = "v";
-            ((System.ComponentModel.ISupportInitialize)(this.buscarAllResponseBindingSource)).EndInit();
+            this.Text = "SGA Persia Mantenedor de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.buscarResponseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buscarAllResponseBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

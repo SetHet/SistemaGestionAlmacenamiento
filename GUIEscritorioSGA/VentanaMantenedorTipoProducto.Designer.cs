@@ -214,7 +214,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "VentanaMantenedorTipoProducto";
-            this.Text = "SGA Persia Mantenedor Tipos Producto";
+            this.Text = "SGA Persia Mantenedor de Tipos de Productos";
             this.ResumeLayout(false);
             this.PerformLayout();
 
