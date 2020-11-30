@@ -126,12 +126,12 @@ namespace GUIEscritorioSGA
             {
                 if (Txt_NombreBodega.Text.Equals(string.Empty))
                 {
-                    MessageBox.Show("Ingresar un nombre de Bodega Correcto", "Sistema");
+                    MessageBox.Show("Ingresar un nombre de Bodega correcto", "Sistema");
                     return;
                 }
                 if (txt_DireccionBodega.Text.Equals(string.Empty))
                 {
-                    MessageBox.Show("Ingresar una direccion de Bodega Correcto", "Sistema");
+                    MessageBox.Show("Ingresar una direccion de Bodega correcta", "Sistema");
                     return;
                 }
 
@@ -168,7 +168,7 @@ namespace GUIEscritorioSGA
         {
             if (Txt_NombreBodega.Text.Equals(string.Empty))
             {
-                MessageBox.Show("Para actualizar se necesita ingresar un nombre de tipo valido.", "Sistema");
+                MessageBox.Show("Para actualizar se necesita ingresar un nombre de bodega valido.", "Sistema");
                 return;
             }
             if (txt_DireccionBodega.Text.Equals(string.Empty))

@@ -198,6 +198,7 @@
             // 
             // Txt_NombreBodega
             // 
+            this.Txt_NombreBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_NombreBodega.Location = new System.Drawing.Point(404, 118);
             this.Txt_NombreBodega.Multiline = true;
             this.Txt_NombreBodega.Name = "Txt_NombreBodega";
@@ -207,6 +208,7 @@
             // 
             // txt_DireccionBodega
             // 
+            this.txt_DireccionBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DireccionBodega.Location = new System.Drawing.Point(404, 170);
             this.txt_DireccionBodega.Multiline = true;
             this.txt_DireccionBodega.Name = "txt_DireccionBodega";

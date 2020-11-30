@@ -136,7 +136,7 @@ namespace GUIEscritorioSGA
         {
             if (Txt_Nombre.Text.Equals(string.Empty))
             {
-                MessageBox.Show("Para actualizar se necesita ingresar un nombre de tipo valido.", "Sistema");
+                MessageBox.Show("Para actualizar se necesita ingresar un nombre de tipo de producto valido.", "Sistema");
                 return;
             }
             if (auxListaTiposProductos.Count > 0)
