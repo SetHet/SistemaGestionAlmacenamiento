@@ -48,7 +48,6 @@
             this.Txt_Descripcion = new System.Windows.Forms.TextBox();
             this.Cm_IDTipo = new System.Windows.Forms.ComboBox();
             this.buscarResponseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Txt_IdTipoProducto = new System.Windows.Forms.TextBox();
             this.buscarAllResponseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.buscarResponseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buscarAllResponseBindingSource)).BeginInit();
@@ -234,23 +233,17 @@
             // Cm_IDTipo
             // 
             this.Cm_IDTipo.DataSource = this.buscarResponseBindingSource;
+            this.Cm_IDTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cm_IDTipo.FormattingEnabled = true;
-            this.Cm_IDTipo.Location = new System.Drawing.Point(386, 89);
+            this.Cm_IDTipo.Location = new System.Drawing.Point(386, 87);
             this.Cm_IDTipo.Name = "Cm_IDTipo";
-            this.Cm_IDTipo.Size = new System.Drawing.Size(186, 21);
+            this.Cm_IDTipo.Size = new System.Drawing.Size(186, 28);
             this.Cm_IDTipo.TabIndex = 33;
             this.Cm_IDTipo.SelectedIndexChanged += new System.EventHandler(this.Cmb_SelectedIndexChanged);
             // 
             // buscarResponseBindingSource
             // 
             this.buscarResponseBindingSource.DataSource = typeof(GUIEscritorioSGA.ServiceTipoProducto.BuscarResponse);
-            // 
-            // Txt_IdTipoProducto
-            // 
-            this.Txt_IdTipoProducto.Location = new System.Drawing.Point(20, 104);
-            this.Txt_IdTipoProducto.Name = "Txt_IdTipoProducto";
-            this.Txt_IdTipoProducto.Size = new System.Drawing.Size(186, 20);
-            this.Txt_IdTipoProducto.TabIndex = 34;
             // 
             // buscarAllResponseBindingSource
             // 
@@ -261,7 +254,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Txt_IdTipoProducto);
             this.Controls.Add(this.Cm_IDTipo);
             this.Controls.Add(this.Txt_Descripcion);
             this.Controls.Add(this.Txt_NombreProducto);
@@ -309,7 +301,6 @@
         private System.Windows.Forms.TextBox Txt_NombreProducto;
         private System.Windows.Forms.TextBox Txt_Descripcion;
         private System.Windows.Forms.ComboBox Cm_IDTipo;
-        private System.Windows.Forms.TextBox Txt_IdTipoProducto;
         private System.Windows.Forms.BindingSource buscarAllResponseBindingSource;
         private System.Windows.Forms.BindingSource buscarResponseBindingSource;
     }

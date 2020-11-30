@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using GUIEscritorioSGA.ServiceProducto;
+using GUIEscritorioSGA.ServiceTipoProducto;
 
 namespace GUIEscritorioSGA
 {
@@ -16,6 +17,8 @@ namespace GUIEscritorioSGA
         {
             InitializeComponent();
             AuxServiceProducto = new ServiceProducto.WebServiceProductoSoapClient();
+            AuxServiceTipoProducto = new ServiceTipoProducto.WebServiceTipoProductoSoapClient();
+            CargarTiposProductos();
             TerminarGuardado();
         }
         private bool enGuardado;
@@ -23,19 +26,38 @@ namespace GUIEscritorioSGA
         private ServiceProducto.WebServiceProductoSoapClient auxServiceProducto;
         private ServiceProducto.MDProducto auxProducto;
         private List<ServiceProducto.MDProducto> auxListaProducto;
+        private ServiceTipoProducto.WebServiceTipoProductoSoapClient auxServiceTipoProducto;
+        private List<ServiceTipoProducto.MDTipoProducto> listaTipoProducto;
+        private List<string> listaTipoProductoString;
 
         public bool EnGuardado { get => enGuardado; set => enGuardado = value; }
         public int PosicionLista { get => posicionLista; set => posicionLista = value; }
         public WebServiceProductoSoapClient AuxServiceProducto { get => auxServiceProducto; set => auxServiceProducto = value; }
         public MDProducto AuxProducto { get => auxProducto; set => auxProducto = value; }
         public List<MDProducto> AuxListaProducto { get => auxListaProducto; set => auxListaProducto = value; }
+        public WebServiceTipoProductoSoapClient AuxServiceTipoProducto { get => auxServiceTipoProducto; set => auxServiceTipoProducto = value; }
+        public List<MDTipoProducto> ListaTipoProducto { get => listaTipoProducto; set => listaTipoProducto = value; }
+        public List<string> ListaTipoProductoString { get => listaTipoProductoString; set => listaTipoProductoString = value; }
+
+        private void CargarTiposProductos()
+        {
+            ListaTipoProducto = AuxServiceTipoProducto.BuscarAll().ToList();
+            ListaTipoProductoString = new List<string>();
+
+            foreach (var tipoProducto in ListaTipoProducto)
+            {
+                ListaTipoProductoString.Add(tipoProducto.NombreTipo);
+            }
+
+            Cm_IDTipo.DataSource = ListaTipoProductoString;
+        }
 
         private void ComenzarGuardado()
         {
             EnGuardado = true;
             Txt_NombreProducto.Clear();
             Txt_Descripcion .Clear();
-            Txt_IdTipoProducto.Text = "ID automatico";
+            Cm_IDTipo.SelectedIndex = 0;
             Txt_IDProducto.Text = "ID automatico";
             Btn_Nuevo.Text = "Guardar";
             Btn_Salir.Text = "Cancelar";
@@ -68,6 +90,20 @@ namespace GUIEscritorioSGA
             ActualizarPantalla();
         }
 
+        private int SearchIndexTipoProducto(int id_tipo)
+        {
+            int index = 0;
+            foreach (var tipoProducto in ListaTipoProducto)
+            {
+                if (tipoProducto.IdTipoProducto == id_tipo)
+                {
+                    return index;
+                }
+                index++;
+            }
+            return -1;
+        }
+
         private void ActualizarPantalla()
         {
             if (PosicionLista >= AuxListaProducto.Count)
@@ -81,9 +117,11 @@ namespace GUIEscritorioSGA
 
             if (AuxListaProducto.Count > 0)
             {
+
+
                 Txt_Actual.Text = (PosicionLista + 1) + " / " + AuxListaProducto.Count;
                 Txt_IDProducto.Text = AuxListaProducto[PosicionLista].IdProducto.ToString();
-                Txt_IdTipoProducto.Text = AuxListaProducto[PosicionLista].IdProducto.ToString();
+                Cm_IDTipo.SelectedIndex = SearchIndexTipoProducto(AuxListaProducto[PosicionLista].IdTipoProducto);
                 Txt_NombreProducto.Text = AuxListaProducto[PosicionLista].Nombre;
                 Txt_Descripcion.Text = AuxListaProducto[PosicionLista].Descripcion;
             }
@@ -91,7 +129,7 @@ namespace GUIEscritorioSGA
             {
                 Txt_Actual.Text = "0 / 0";
                 Txt_IDProducto.Clear();
-                Txt_IdTipoProducto.Clear();
+                
                 Txt_NombreProducto.Clear();
                 Txt_Descripcion.Clear();
             }
@@ -126,12 +164,21 @@ namespace GUIEscritorioSGA
                 }
                 if (Txt_Descripcion.Text.Equals(string.Empty))
                 {
-                    MessageBox.Show("Ingresar una direccion de Producto Correcto", "Sistema");
+                    MessageBox.Show("Ingresar una descripcion de Producto Correcto", "Sistema");
                     return;
                 }
 
-                auxServiceProducto.InsertWithValues(int.Parse(Txt_IdTipoProducto.Text), Txt_NombreProducto.Text, Txt_Descripcion.Text);
-                TerminarGuardado();
+                bool resultadoGuardado = auxServiceProducto.InsertWithValues(ListaTipoProducto[Cm_IDTipo.SelectedIndex].IdTipoProducto, Txt_NombreProducto.Text, Txt_Descripcion.Text);
+                if (resultadoGuardado)
+                {
+                    MessageBox.Show("Se ha guardado el producto correctamente");
+                    TerminarGuardado(); 
+                }
+                else
+                {
+                    MessageBox.Show("NO se ha guardado el producto correctamente");
+                }
+
             }
             else
             {
@@ -170,12 +217,12 @@ namespace GUIEscritorioSGA
 
             if (Txt_Descripcion .Text.Equals(string.Empty))
             {
-                MessageBox.Show("Para actualizar se necesita ingresar una direccion valida.", "Sistema");
+                MessageBox.Show("Para actualizar se necesita ingresar una descripcion valida.", "Sistema");
                 return;
             }
             if (auxListaProducto.Count > 0)
             {
-                bool resultado = auxServiceProducto.UpdateWithValues( int.Parse(Txt_IDProducto.Text), int.Parse(Txt_IdTipoProducto.Text), Txt_NombreProducto.Text, Txt_Descripcion.Text);
+                bool resultado = auxServiceProducto.UpdateWithValues( int.Parse(Txt_IDProducto.Text), ListaTipoProducto[Cm_IDTipo.SelectedIndex].IdTipoProducto, Txt_NombreProducto.Text, Txt_Descripcion.Text);
                 if (resultado == false)
                 {
                     MessageBox.Show("No se puede actualizar el elemento.", "Sistema");
@@ -199,9 +246,16 @@ namespace GUIEscritorioSGA
 
         private void Btn_Salir_Click_1(object sender, EventArgs e)
         {
-            this.Dispose();
-            GC.Collect();
-            this.Close();
+            if (enGuardado)
+            {
+                TerminarGuardado();
+            }
+            else
+            {
+                this.Dispose();
+                GC.Collect();
+                this.Close();
+            }
         }
 
         private void Btn_Primero_Click(object sender, EventArgs e)

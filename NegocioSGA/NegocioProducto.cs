@@ -83,7 +83,7 @@ namespace NegocioSGA
 
         public bool Insert(MDProducto nuevoProducto)
         {
-            //FALTA ID TIPO PRODUCTO QUE ES FORANEO
+            
             string nonQuery = $"INSERT INTO Producto (id_tipo_producto, nombre, descripcion) VALUES ({nuevoProducto.IdTipoProducto},'{nuevoProducto.Nombre}','{nuevoProducto.Descripcion}')";
             return Conexion.NonQuery(nonQuery);
         }
@@ -92,7 +92,7 @@ namespace NegocioSGA
         {
             MDProducto auxProducto = new MDProducto();
             auxProducto.IdProducto = 0;
-            auxProducto.IdTipoProducto = 0;
+            auxProducto.IdTipoProducto = id_tipo;
             auxProducto.Nombre = nombre;
             auxProducto.Descripcion = descripcion;
             return Insert(auxProducto);
