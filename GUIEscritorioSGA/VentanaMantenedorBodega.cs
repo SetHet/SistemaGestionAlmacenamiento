@@ -135,9 +135,16 @@ namespace GUIEscritorioSGA
                     return;
                 }
 
-                auxServiceBodega.InsertWithValues(Txt_NombreBodega.Text,txt_DireccionBodega.Text);
-                TerminarGuardado();
-                MessageBox.Show("Elementos guardados correctamente", "Sistema");
+                bool respuestaGuardado = auxServiceBodega.InsertWithValues(Txt_NombreBodega.Text,txt_DireccionBodega.Text);
+                if (respuestaGuardado)
+                {
+                    TerminarGuardado();
+                    MessageBox.Show("Bodega guardada", "Sistema");
+                }
+                else
+                {
+                    MessageBox.Show("La bodega no se pudo guardar", "Sistema");
+                }
             }
             else
             {
@@ -154,12 +161,12 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceBodega.Delete(int.Parse(Txt_IdBodega.Text));
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede eliminar el elemento.", "Sistema");
+                    MessageBox.Show("No se puede eliminar la bodega.", "Sistema");
                 }
                 else
                 {
                     ActualizarLista();
-                    MessageBox.Show("Elemento eliminado correctamente", "Sistema");
+                    MessageBox.Show("Bodega eliminada.", "Sistema");
                     
                 }
             }
@@ -186,18 +193,18 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceBodega.UpdateWithValues(int.Parse(Txt_IdBodega.Text), Txt_NombreBodega.Text , txt_DireccionBodega.Text);
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede actualizar el elemento.", "Sistema");
+                    MessageBox.Show("No se puede actualizar la bodega.", "Sistema");
                 }
                 else
                 {
                     
                     ActualizarLista();
-                    MessageBox.Show("Elementos actualizados correctamente", "Sistema");
+                    MessageBox.Show("Bodega actualizada", "Sistema");
                 }
             }
             else
             {
-                MessageBox.Show("No hay elementos que Actualizar.", "Sistema");
+                MessageBox.Show("No hay bodegas para actualizar.", "Sistema");
             }
         }
 
