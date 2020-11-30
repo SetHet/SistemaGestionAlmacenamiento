@@ -38,9 +38,13 @@
             // 
             // DataGridView_ListaTipoProductos
             // 
+            this.DataGridView_ListaTipoProductos.AllowUserToAddRows = false;
+            this.DataGridView_ListaTipoProductos.AllowUserToDeleteRows = false;
+            this.DataGridView_ListaTipoProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DataGridView_ListaTipoProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_ListaTipoProductos.Location = new System.Drawing.Point(278, 13);
             this.DataGridView_ListaTipoProductos.Name = "DataGridView_ListaTipoProductos";
+            this.DataGridView_ListaTipoProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView_ListaTipoProductos.Size = new System.Drawing.Size(503, 425);
             this.DataGridView_ListaTipoProductos.TabIndex = 14;
             // 
