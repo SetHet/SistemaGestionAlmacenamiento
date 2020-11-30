@@ -179,11 +179,11 @@ namespace GUIEscritorioSGA
                 {
                     
                     TerminarGuardado();
-                    MessageBox.Show("Se ha guardado el producto correctamente" ,"Sistema");
+                    MessageBox.Show("Nuevo producto guardado." ,"Sistema");
                 }
                 else
                 {
-                    MessageBox.Show("NO se ha guardado el producto correctamente");
+                    MessageBox.Show("No se pudo guardar el nuevo producto.", "Sistema");
                 }
 
             }
@@ -200,12 +200,12 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceProducto.Delete(int.Parse(Txt_IDProducto.Text));
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede eliminar el elemento.", "Sistema");
+                    MessageBox.Show("No se puede eliminar el producto.", "Sistema");
                 }
                 else
                 {
                     ActualizarLista();
-                    MessageBox.Show("Se ha eliminado el producto correctamente", "Sistema");
+                    MessageBox.Show("Producto eliminado.", "Sistema");
                 }
             }
             else
@@ -233,12 +233,12 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceProducto.UpdateWithValues( int.Parse(Txt_IDProducto.Text), ListaTipoProducto[Cm_IDTipo.SelectedIndex].IdTipoProducto, Txt_NombreProducto.Text, Txt_Descripcion.Text);
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede actualizar el elemento.", "Sistema");
+                    MessageBox.Show("No se puede actualizar el producto.", "Sistema");
                 }
                 else
                 {
                     ActualizarLista();
-                    MessageBox.Show("Se ha actualizado el producto correctamente", "Sistema");
+                    MessageBox.Show("Producto actualizado.", "Sistema");
                 }
             }
             else
