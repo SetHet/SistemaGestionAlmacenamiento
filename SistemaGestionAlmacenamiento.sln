@@ -16,8 +16,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUIEscritorioSGA", "GUIEscr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioSGA", "ServicioSGA\ServicioSGA.csproj", "{DA4CF504-64BC-4EAB-AC8A-A0318129E030}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTenting", "ConsoleTenting\ConsoleTenting.csproj", "{F5B43BCF-7047-444F-8C98-00B7116FB909}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,10 +42,6 @@ Global
 		{DA4CF504-64BC-4EAB-AC8A-A0318129E030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA4CF504-64BC-4EAB-AC8A-A0318129E030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA4CF504-64BC-4EAB-AC8A-A0318129E030}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F5B43BCF-7047-444F-8C98-00B7116FB909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5B43BCF-7047-444F-8C98-00B7116FB909}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5B43BCF-7047-444F-8C98-00B7116FB909}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5B43BCF-7047-444F-8C98-00B7116FB909}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
