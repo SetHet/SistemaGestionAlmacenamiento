@@ -60,10 +60,12 @@
             // 
             this.DataGridView_ListaEmpleado.AllowUserToAddRows = false;
             this.DataGridView_ListaEmpleado.AllowUserToDeleteRows = false;
+            this.DataGridView_ListaEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DataGridView_ListaEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_ListaEmpleado.Location = new System.Drawing.Point(183, 8);
             this.DataGridView_ListaEmpleado.Name = "DataGridView_ListaEmpleado";
             this.DataGridView_ListaEmpleado.ReadOnly = true;
+            this.DataGridView_ListaEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView_ListaEmpleado.Size = new System.Drawing.Size(434, 380);
             this.DataGridView_ListaEmpleado.TabIndex = 6;
             // 

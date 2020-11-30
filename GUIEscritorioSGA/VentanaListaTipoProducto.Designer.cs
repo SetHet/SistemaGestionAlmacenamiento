@@ -38,10 +38,12 @@
             // 
             this.DataGridView_ListaTipoProducto.AllowUserToAddRows = false;
             this.DataGridView_ListaTipoProducto.AllowUserToDeleteRows = false;
+            this.DataGridView_ListaTipoProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DataGridView_ListaTipoProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_ListaTipoProducto.Location = new System.Drawing.Point(12, 12);
             this.DataGridView_ListaTipoProducto.Name = "DataGridView_ListaTipoProducto";
             this.DataGridView_ListaTipoProducto.ReadOnly = true;
+            this.DataGridView_ListaTipoProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView_ListaTipoProducto.Size = new System.Drawing.Size(434, 380);
             this.DataGridView_ListaTipoProducto.TabIndex = 0;
             this.DataGridView_ListaTipoProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_ListaTipoProducto_CellContentClick);

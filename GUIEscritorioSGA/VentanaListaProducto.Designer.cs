@@ -60,10 +60,12 @@
             // 
             this.DataGridView_ListaProducto.AllowUserToAddRows = false;
             this.DataGridView_ListaProducto.AllowUserToDeleteRows = false;
+            this.DataGridView_ListaProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DataGridView_ListaProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_ListaProducto.Location = new System.Drawing.Point(183, 8);
             this.DataGridView_ListaProducto.Name = "DataGridView_ListaProducto";
             this.DataGridView_ListaProducto.ReadOnly = true;
+            this.DataGridView_ListaProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView_ListaProducto.Size = new System.Drawing.Size(434, 380);
             this.DataGridView_ListaProducto.TabIndex = 9;
             // 

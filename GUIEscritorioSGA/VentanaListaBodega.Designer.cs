@@ -60,10 +60,12 @@
             // 
             this.DataGridView_ListaBodega.AllowUserToAddRows = false;
             this.DataGridView_ListaBodega.AllowUserToDeleteRows = false;
+            this.DataGridView_ListaBodega.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DataGridView_ListaBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_ListaBodega.Location = new System.Drawing.Point(183, 8);
             this.DataGridView_ListaBodega.Name = "DataGridView_ListaBodega";
             this.DataGridView_ListaBodega.ReadOnly = true;
+            this.DataGridView_ListaBodega.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView_ListaBodega.Size = new System.Drawing.Size(434, 380);
             this.DataGridView_ListaBodega.TabIndex = 3;
             this.DataGridView_ListaBodega.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_ListaBodega_CellContentClick);
