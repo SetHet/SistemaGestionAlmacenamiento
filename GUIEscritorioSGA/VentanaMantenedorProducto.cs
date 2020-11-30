@@ -49,7 +49,15 @@ namespace GUIEscritorioSGA
                 ListaTipoProductoString.Add(tipoProducto.NombreTipo);
             }
 
-            Cm_IDTipo.DataSource = ListaTipoProductoString;
+            if (ListaTipoProducto.Count <= 0)
+            {
+                MessageBox.Show("No se puede agregar productos sin tener algun tipo producto ingresado en el sistema.", "Sistema");
+                return;
+            }
+            else
+            {
+                Cm_IDTipo.DataSource = ListaTipoProductoString;
+            }
         }
 
         private void ComenzarGuardado()
@@ -161,6 +169,12 @@ namespace GUIEscritorioSGA
 
         private void Btn_Nuevo_Click(object sender, EventArgs e)
         {
+            if (ListaTipoProducto.Count <= 0)
+            {
+                MessageBox.Show("No se puede agregar productos sin tener algun tipo producto ingresado en el sistema.", "Sistema");
+                return;
+            }
+
             if (EnGuardado)
             {
                 if (Txt_NombreProducto.Text.Equals(string.Empty))
