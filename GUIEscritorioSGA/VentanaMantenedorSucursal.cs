@@ -164,9 +164,16 @@ namespace GUIEscritorioSGA
                     return;
                 }
 
-                auxServiceSucursal.InsertWithValues(Txt_NombreSucursal.Text, txt_DireccionSucursal.Text);
-                TerminarGuardado();
-                MessageBox.Show("Elementos guardados correctamente", "Sistema");
+                bool resultadoGuardado = auxServiceSucursal.InsertWithValues(Txt_NombreSucursal.Text, txt_DireccionSucursal.Text);
+                if (resultadoGuardado)
+                {
+                    TerminarGuardado();
+                    MessageBox.Show("Nueva Sucursal guardada.", "Sistema");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar la nueva sucursal.", "Sistema");
+                }
             }
             else
             {
@@ -186,17 +193,17 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceSucursal.Delete(int.Parse(Txt_IdSucursal.Text));
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede eliminar el elemento.", "Sistema");
+                    MessageBox.Show("No se puede eliminar la sucursal.", "Sistema");
                 }
                 else
                 {
                     ActualizarLista();
-                    MessageBox.Show("Elementos eliminados correctamente", "Sistema");
+                    MessageBox.Show("Sucursal eliminada.", "Sistema");
                 }
             }
             else
             {
-                MessageBox.Show("No hay elementos que Eliminar.", "Sistema");
+                MessageBox.Show("No hay sucursales que se puedan eliminar.", "Sistema");
             }
         }
 
@@ -217,13 +224,13 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceSucursal.UpdateWithValues(int.Parse(Txt_IdSucursal.Text), Txt_NombreSucursal.Text, txt_DireccionSucursal.Text);
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede actualizar el elemento.", "Sistema");
+                    MessageBox.Show("No se puede actualizar la sucursal.", "Sistema");
                 }
                 else
                 {
                     
                     ActualizarLista();
-                    MessageBox.Show("Elementos Actualizados correctamente", "Sistema");
+                    MessageBox.Show("Sucursal actualizada.", "Sistema");
                 }
             }
             else
