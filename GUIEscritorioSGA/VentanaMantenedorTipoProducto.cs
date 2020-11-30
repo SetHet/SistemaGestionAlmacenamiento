@@ -117,9 +117,16 @@ namespace GUIEscritorioSGA
                     return;
                 }
 
-                auxServiceTipoProducto.InsertWithValues(Txt_Nombre.Text);
-                TerminarGuardado();
-                MessageBox.Show("Elementos guardados correctamente", "Sistema");
+                bool resultadoGuardar = auxServiceTipoProducto.InsertWithValues(Txt_Nombre.Text);
+                if (resultadoGuardar)
+                {
+                    TerminarGuardado();
+                    MessageBox.Show("Nuevo Tipo de producto guardado.", "Sistema");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar el nuevo tipo de producto.", "Sistema");
+                }
             }
             else
             {
@@ -145,12 +152,12 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceTipoProducto.UpdateWithValues(int.Parse(Txt_ID.Text), Txt_Nombre.Text);
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede actualizar el elemento.", "Sistema");
+                    MessageBox.Show("No se puede actualizar el tipo producto.", "Sistema");
                 }
                 else
                 {
                     ActualizarLista();
-                    MessageBox.Show("Elementos Actualizados correctamente", "Sistema");
+                    MessageBox.Show("Tipo producto actualizado.", "Sistema");
                 }
             }
             else
@@ -165,12 +172,12 @@ namespace GUIEscritorioSGA
                 bool resultado = auxServiceTipoProducto.Delete(int.Parse(Txt_ID.Text));
                 if (resultado == false)
                 {
-                    MessageBox.Show("No se puede eliminar el elemento.", "Sistema");
+                    MessageBox.Show("No se puede eliminar el tipo de producto.", "Sistema");
                 }
                 else
                 {
                     ActualizarLista();
-                    MessageBox.Show("Elementos eliminados correctamente", "Sistema");
+                    MessageBox.Show("Tipo producto eliminado.", "Sistema");
                 }
             }
             else
