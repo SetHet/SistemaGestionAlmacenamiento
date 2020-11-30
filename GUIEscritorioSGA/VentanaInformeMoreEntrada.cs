@@ -58,11 +58,13 @@ namespace GUIEscritorioSGA
         }
         #endregion
 
+        #region Constructor
         public VentanaInformeMoreEntrada()
         {
             InitializeComponent();
             CargarContenido();
         }
+        #endregion
 
         #region Funciones
         private void CargarContenido()
@@ -142,7 +144,7 @@ namespace GUIEscritorioSGA
 
             //Ingresar en la DataGridView
             DataGridView_ListaProductos.DataSource = ListaIDProductoCantidad;
-            //DataGridView_ListaProductos.Sort(DataGridView_ListaProductos.Columns[2], ListSortDirection.Descending);
+            
         }
         #endregion
 

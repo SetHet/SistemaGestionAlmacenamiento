@@ -52,6 +52,7 @@
             this.ComboBox_Bodegas.Name = "ComboBox_Bodegas";
             this.ComboBox_Bodegas.Size = new System.Drawing.Size(223, 28);
             this.ComboBox_Bodegas.TabIndex = 13;
+            this.ComboBox_Bodegas.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Bodegas_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -72,6 +73,7 @@
             this.Btn_Actualizar.TabIndex = 11;
             this.Btn_Actualizar.Text = "Actualizar";
             this.Btn_Actualizar.UseVisualStyleBackColor = true;
+            this.Btn_Actualizar.Click += new System.EventHandler(this.Btn_Actualizar_Click);
             // 
             // Btn_Salir
             // 
@@ -82,6 +84,7 @@
             this.Btn_Salir.TabIndex = 10;
             this.Btn_Salir.Text = "Salir";
             this.Btn_Salir.UseVisualStyleBackColor = true;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // VentanaInformeStockTipoProducto
             // 

@@ -224,7 +224,7 @@ namespace NegocioSGA
 
 
 
-        ///////////////////////////////
+        
         public List<DTipoProductoCantidad> GetCantidadTipoProductoActual()
         {
             List<DTipoProductoCantidad> lista = new List<DTipoProductoCantidad>();

@@ -74,5 +74,53 @@ namespace ServicioSGA
 
             return negocioTipoProducto.Update(editableTipoProducto);
         }
+
+        [WebMethod]
+        public List<DTipoProductoCantidad> GetCantidadTipoProductoActual()
+        {
+            NegocioTipoProducto negocioTipoProducto = new NegocioTipoProducto();
+
+            return negocioTipoProducto.GetCantidadTipoProductoActual();
+        }
+
+        [WebMethod]
+        public List<DTipoProductoCantidad> GetCantidadTipoProductoActualByBodega(int id_bodega)
+        {
+            NegocioTipoProducto negocioTipoProducto = new NegocioTipoProducto();
+
+            return negocioTipoProducto.GetCantidadTipoProductoActualByBodega(id_bodega);
+        }
+
+        [WebMethod]
+        public List<DTipoProductoCantidad> GetCantidadTipoProductoEntrada()
+        {
+            NegocioTipoProducto negocioTipoProducto = new NegocioTipoProducto();
+
+            return negocioTipoProducto.GetCantidadTipoProductoEntrada();
+        }
+
+        [WebMethod]
+        public List<DTipoProductoCantidad> GetCantidadTipoProductoEntradaByBodega(int id_bodega)
+        {
+            NegocioTipoProducto negocioTipoProducto = new NegocioTipoProducto();
+
+            return negocioTipoProducto.GetCantidadTipoProductoEntradaByBodega(id_bodega);
+        }
+
+        [WebMethod]
+        public List<DTipoProductoCantidad> GetCantidadTipoProductoSalida()
+        {
+            NegocioTipoProducto negocioTipoProducto = new NegocioTipoProducto();
+
+            return negocioTipoProducto.GetCantidadTipoProductoSalida();
+        }
+
+        [WebMethod]
+        public List<DTipoProductoCantidad> GetCantidadTipoProductoSalidaByBodega(int id_bodega)
+        {
+            NegocioTipoProducto negocioTipoProducto = new NegocioTipoProducto();
+
+            return negocioTipoProducto.GetCantidadTipoProductoSalidaByBodega(id_bodega);
+        }
     }
 }
