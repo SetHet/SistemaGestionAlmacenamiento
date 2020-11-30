@@ -119,6 +119,7 @@ namespace GUIEscritorioSGA
 
                 auxServiceTipoProducto.InsertWithValues(Txt_Nombre.Text);
                 TerminarGuardado();
+                MessageBox.Show("Elementos guardados correctamente", "Sistema");
             }
             else
             {
@@ -149,6 +150,7 @@ namespace GUIEscritorioSGA
                 else
                 {
                     ActualizarLista();
+                    MessageBox.Show("Elementos Actualizados correctamente", "Sistema");
                 }
             }
             else
@@ -168,6 +170,7 @@ namespace GUIEscritorioSGA
                 else
                 {
                     ActualizarLista();
+                    MessageBox.Show("Elementos eliminados correctamente", "Sistema");
                 }
             }
             else

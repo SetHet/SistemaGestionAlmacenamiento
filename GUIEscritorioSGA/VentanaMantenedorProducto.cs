@@ -99,6 +99,12 @@ namespace GUIEscritorioSGA
                 {
                     return index;
                 }
+                
+                else
+                {
+                    
+                    
+                }
                 index++;
             }
             return -1;
@@ -171,8 +177,9 @@ namespace GUIEscritorioSGA
                 bool resultadoGuardado = auxServiceProducto.InsertWithValues(ListaTipoProducto[Cm_IDTipo.SelectedIndex].IdTipoProducto, Txt_NombreProducto.Text, Txt_Descripcion.Text);
                 if (resultadoGuardado)
                 {
-                    MessageBox.Show("Se ha guardado el producto correctamente");
-                    TerminarGuardado(); 
+                    
+                    TerminarGuardado();
+                    MessageBox.Show("Se ha guardado el producto correctamente" ,"Sistema");
                 }
                 else
                 {
@@ -198,6 +205,7 @@ namespace GUIEscritorioSGA
                 else
                 {
                     ActualizarLista();
+                    MessageBox.Show("Se ha eliminado el producto correctamente", "Sistema");
                 }
             }
             else
@@ -211,7 +219,7 @@ namespace GUIEscritorioSGA
             
             if (Txt_NombreProducto.Text.Equals(string.Empty))
             {
-                MessageBox.Show("Para actualizar se necesita ingresar un nombre de tipo valido.", "Sistema");
+                MessageBox.Show("Para actualizar se necesita ingresar un nombre de producto valido.", "Sistema");
                 return;
             }
 
@@ -230,6 +238,7 @@ namespace GUIEscritorioSGA
                 else
                 {
                     ActualizarLista();
+                    MessageBox.Show("Se ha actualizado el producto correctamente", "Sistema");
                 }
             }
             else

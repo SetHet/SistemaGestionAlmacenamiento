@@ -128,6 +128,7 @@ namespace GUIEscritorioSGA
 
                 auxServiceProveedor.InsertWithValues(Txt_NombreProveedor.Text, txt_DireccionProveedor.Text);
                 TerminarGuardado();
+                MessageBox.Show("Elementos guardados correctamente", "Sistema");
             }
             else
             {
@@ -141,30 +142,7 @@ namespace GUIEscritorioSGA
           //  auxListaProveedor.ShowDialog();
         }
 
-        private void Btn_Actualizar_Click(object sender, EventArgs e)
-        {
-            if (Txt_NombreProveedor.Text.Equals(string.Empty))
-            {
-                MessageBox.Show("Para actualizar se necesita ingresar un nombre de Proveedor valido.", "Sistema");
-                return;
-            }
-            if (auxListaProveedor.Count > 0)
-            {
-                bool resultado = auxServiceProveedor.UpdateWithValues(int.Parse(Txt_IdProveedor.Text), Txt_NombreProveedor.Text, txt_DireccionProveedor.Text);
-                if (resultado == false)
-                {
-                    MessageBox.Show("No se puede actualizar el elemento.", "Sistema");
-                }
-                else
-                {
-                    ActualizarLista();
-                }
-            }
-            else
-            {
-                MessageBox.Show("No hay elementos que Actualizar.", "Sistema");
-            }
-        }
+     
 
         
 
@@ -229,7 +207,9 @@ namespace GUIEscritorioSGA
                 }
                 else
                 {
+                   
                     ActualizarLista();
+                    MessageBox.Show("Elementos eliminados correctamente","Sistema");
                 }
             }
             else
@@ -248,7 +228,7 @@ namespace GUIEscritorioSGA
         {
             if (Txt_NombreProveedor.Text.Equals(string.Empty))
             {
-                MessageBox.Show("Para actualizar se necesita ingresar un nombre de tipo valido.", "Sistema");
+                MessageBox.Show("Para actualizar se necesita ingresar un nombre de proveedor valido.", "Sistema");
                 return;
             }
             if (txt_DireccionProveedor.Text.Equals(string.Empty))
@@ -266,6 +246,7 @@ namespace GUIEscritorioSGA
                 else
                 {
                     ActualizarLista();
+                    MessageBox.Show("Elementos actualizados correctamente", "Sistema");
                 }
             }
             else

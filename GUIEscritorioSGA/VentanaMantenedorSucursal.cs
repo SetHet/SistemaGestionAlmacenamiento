@@ -155,17 +155,18 @@ namespace GUIEscritorioSGA
             {
                 if (Txt_NombreSucursal.Text.Equals(string.Empty))
                 {
-                    MessageBox.Show("Ingresar un nombre de Sucursal Correcto", "Sistema");
+                    MessageBox.Show("Ingresar un nombre de Sucursal correcto", "Sistema");
                     return;
                 }
                 if (txt_DireccionSucursal.Text.Equals(string.Empty))
                 {
-                    MessageBox.Show("Ingresar una direccion de Sucursal Correcto", "Sistema");
+                    MessageBox.Show("Ingresar una direccion de Sucursal correcta", "Sistema");
                     return;
                 }
 
                 auxServiceSucursal.InsertWithValues(Txt_NombreSucursal.Text, txt_DireccionSucursal.Text);
                 TerminarGuardado();
+                MessageBox.Show("Elementos guardados correctamente", "Sistema");
             }
             else
             {
@@ -190,6 +191,7 @@ namespace GUIEscritorioSGA
                 else
                 {
                     ActualizarLista();
+                    MessageBox.Show("Elementos eliminados correctamente", "Sistema");
                 }
             }
             else
@@ -202,7 +204,7 @@ namespace GUIEscritorioSGA
         {
             if (Txt_NombreSucursal.Text.Equals(string.Empty))
             {
-                MessageBox.Show("Para actualizar se necesita ingresar un nombre de tipo valido.", "Sistema");
+                MessageBox.Show("Para actualizar se necesita ingresar un nombre de sucursal valida.", "Sistema");
                 return;
             }
             if (txt_DireccionSucursal.Text.Equals(string.Empty))
@@ -219,7 +221,9 @@ namespace GUIEscritorioSGA
                 }
                 else
                 {
+                    
                     ActualizarLista();
+                    MessageBox.Show("Elementos Actualizados correctamente", "Sistema");
                 }
             }
             else

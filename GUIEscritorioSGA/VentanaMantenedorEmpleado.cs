@@ -139,10 +139,12 @@ namespace GUIEscritorioSGA
 
                 auxServiceEmpleado.InsertWithValues(Txt_RutEmpleado.Text, Txt_NombreEmpleado.Text, Txt_ApellidoEmpleado.Text,Txt_Contraseña.Text);
                 TerminarGuardado();
+                MessageBox.Show("Elementos guardados correctamente", "Sistema");
             }
             else
             {
                 ComenzarGuardado();
+                
             }
         }
 
@@ -157,7 +159,9 @@ namespace GUIEscritorioSGA
                 }
                 else
                 {
+
                     ActualizarLista();
+                    MessageBox.Show("Elemento eliminado correctamente", "Sistema");
                 }
             }
             else
@@ -175,7 +179,7 @@ namespace GUIEscritorioSGA
             }
             if (Txt_NombreEmpleado.Text.Equals(string.Empty))
             {
-                MessageBox.Show("Para actualizar se necesita ingresar un nombre  valido.", "Sistema");
+                MessageBox.Show("Para actualizar se necesita ingresar un nombre valido.", "Sistema");
                 return;
             }
             if (Txt_ApellidoEmpleado.Text.Equals(string.Empty))
@@ -198,6 +202,8 @@ namespace GUIEscritorioSGA
                 else
                 {
                     ActualizarLista();
+                    MessageBox.Show("Elementos actualizados correctamente", "Sistema");
+                    
                 }
             }
             else

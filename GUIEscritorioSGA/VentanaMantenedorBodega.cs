@@ -137,10 +137,13 @@ namespace GUIEscritorioSGA
 
                 auxServiceBodega.InsertWithValues(Txt_NombreBodega.Text,txt_DireccionBodega.Text);
                 TerminarGuardado();
+                MessageBox.Show("Elementos guardados correctamente", "Sistema");
             }
             else
             {
+                
                 ComenzarGuardado();
+                
             }
         }
 
@@ -156,6 +159,8 @@ namespace GUIEscritorioSGA
                 else
                 {
                     ActualizarLista();
+                    MessageBox.Show("Elemento eliminado correctamente", "Sistema");
+                    
                 }
             }
             else
@@ -185,7 +190,9 @@ namespace GUIEscritorioSGA
                 }
                 else
                 {
+                    
                     ActualizarLista();
+                    MessageBox.Show("Elementos actualizados correctamente", "Sistema");
                 }
             }
             else

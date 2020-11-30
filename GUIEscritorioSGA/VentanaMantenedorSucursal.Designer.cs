@@ -198,6 +198,7 @@
             // 
             // Txt_NombreSucursal
             // 
+            this.Txt_NombreSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_NombreSucursal.Location = new System.Drawing.Point(409, 110);
             this.Txt_NombreSucursal.Multiline = true;
             this.Txt_NombreSucursal.Name = "Txt_NombreSucursal";
@@ -206,6 +207,7 @@
             // 
             // txt_DireccionSucursal
             // 
+            this.txt_DireccionSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DireccionSucursal.Location = new System.Drawing.Point(409, 162);
             this.txt_DireccionSucursal.Multiline = true;
             this.txt_DireccionSucursal.Name = "txt_DireccionSucursal";

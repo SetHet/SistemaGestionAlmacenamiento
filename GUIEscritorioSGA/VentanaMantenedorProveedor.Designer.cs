@@ -198,6 +198,7 @@
             // 
             // txt_DireccionProveedor
             // 
+            this.txt_DireccionProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DireccionProveedor.Location = new System.Drawing.Point(414, 147);
             this.txt_DireccionProveedor.Multiline = true;
             this.txt_DireccionProveedor.Name = "txt_DireccionProveedor";
@@ -206,6 +207,7 @@
             // 
             // Txt_NombreProveedor
             // 
+            this.Txt_NombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_NombreProveedor.Location = new System.Drawing.Point(414, 97);
             this.Txt_NombreProveedor.Multiline = true;
             this.Txt_NombreProveedor.Name = "Txt_NombreProveedor";
